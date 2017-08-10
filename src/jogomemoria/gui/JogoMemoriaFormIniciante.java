@@ -9,12 +9,12 @@ package jogomemoria.gui;
  *
  * @author Aluno
  */
-public class JogoMemoriaForm extends javax.swing.JFrame {
+public class JogoMemoriaFormIniciante extends javax.swing.JFrame {
 
     /**
      * Creates new form JogoMemoriaForm
      */
-    public JogoMemoriaForm() {
+    public JogoMemoriaFormIniciante() {
         initComponents();
     }
 
@@ -74,7 +74,7 @@ public class JogoMemoriaForm extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/13.jpg"))); // NOI18N
         jLabel9.setText("jLabel9");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/13.jpg"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm10.jpg"))); // NOI18N
         jLabel10.setText("jLabel9");
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/16.jpg"))); // NOI18N
@@ -202,20 +202,21 @@ public class JogoMemoriaForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JogoMemoriaForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JogoMemoriaFormIniciante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JogoMemoriaForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JogoMemoriaFormIniciante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JogoMemoriaForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JogoMemoriaFormIniciante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JogoMemoriaForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JogoMemoriaFormIniciante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JogoMemoriaForm().setVisible(true);
+                new JogoMemoriaFormIniciante().setVisible(true);
             }
         });
     }
