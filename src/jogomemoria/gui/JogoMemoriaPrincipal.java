@@ -27,47 +27,102 @@ public class JogoMemoriaPrincipal extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane2 = new javax.swing.JSplitPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        sppPrincipal = new javax.swing.JSplitPane();
+        lblNivel = new javax.swing.JPanel();
+        lblTempo = new javax.swing.JLabel();
+        spnTempo = new javax.swing.JSpinner();
+        jLabel2 = new javax.swing.JLabel();
+        btnIniciar = new javax.swing.JButton();
+        cnbNivel = new javax.swing.JComboBox<>();
+        sppPrincipal2 = new javax.swing.JPanel();
 
         setLayout(new java.awt.BorderLayout());
 
-        jSplitPane2.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+        sppPrincipal.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lblTempo.setText("Tempo Limite:");
+
+        jLabel2.setText("Nivel:");
+
+        btnIniciar.setText("Iniciar");
+        btnIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniciarActionPerformed(evt);
+            }
+        });
+
+        cnbNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Iniciante\t", "Intermediario", "Dificil", " " }));
+        cnbNivel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cnbNivelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout lblNivelLayout = new javax.swing.GroupLayout(lblNivel);
+        lblNivel.setLayout(lblNivelLayout);
+        lblNivelLayout.setHorizontalGroup(
+            lblNivelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lblNivelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTempo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(spnTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cnbNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnIniciar)
+                .addGap(53, 53, 53))
+        );
+        lblNivelLayout.setVerticalGroup(
+            lblNivelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lblNivelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(lblNivelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTempo)
+                    .addComponent(spnTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(btnIniciar)
+                    .addComponent(cnbNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        sppPrincipal.setLeftComponent(lblNivel);
+
+        javax.swing.GroupLayout sppPrincipal2Layout = new javax.swing.GroupLayout(sppPrincipal2);
+        sppPrincipal2.setLayout(sppPrincipal2Layout);
+        sppPrincipal2Layout.setHorizontalGroup(
+            sppPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 398, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jSplitPane2.setLeftComponent(jPanel1);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        sppPrincipal2Layout.setVerticalGroup(
+            sppPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 193, Short.MAX_VALUE)
         );
 
-        jSplitPane2.setRightComponent(jPanel2);
+        sppPrincipal.setRightComponent(sppPrincipal2);
 
-        add(jSplitPane2, java.awt.BorderLayout.CENTER);
+        add(sppPrincipal, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIniciarActionPerformed
+
+    private void cnbNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnbNivelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cnbNivelActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JSplitPane jSplitPane2;
+    private javax.swing.JButton btnIniciar;
+    private javax.swing.JComboBox<String> cnbNivel;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel lblNivel;
+    private javax.swing.JLabel lblTempo;
+    private javax.swing.JSpinner spnTempo;
+    private javax.swing.JSplitPane sppPrincipal;
+    private javax.swing.JPanel sppPrincipal2;
     // End of variables declaration//GEN-END:variables
 }
