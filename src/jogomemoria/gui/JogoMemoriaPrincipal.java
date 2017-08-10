@@ -35,6 +35,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JPanel {
         btnIniciar = new javax.swing.JButton();
         cnbNivel = new javax.swing.JComboBox<>();
         sppPrincipal2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -90,15 +91,23 @@ public class JogoMemoriaPrincipal extends javax.swing.JPanel {
 
         sppPrincipal.setLeftComponent(lblNivel);
 
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout sppPrincipal2Layout = new javax.swing.GroupLayout(sppPrincipal2);
         sppPrincipal2.setLayout(sppPrincipal2Layout);
         sppPrincipal2Layout.setHorizontalGroup(
             sppPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sppPrincipal2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
+                .addContainerGap())
         );
         sppPrincipal2Layout.setVerticalGroup(
             sppPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 193, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sppPrincipal2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         sppPrincipal.setRightComponent(sppPrincipal2);
@@ -118,6 +127,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIniciar;
     private javax.swing.JComboBox<String> cnbNivel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel lblNivel;
     private javax.swing.JLabel lblTempo;
