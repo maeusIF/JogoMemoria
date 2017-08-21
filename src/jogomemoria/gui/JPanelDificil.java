@@ -84,16 +84,13 @@ public class JPanelDificil extends javax.swing.JPanel {
 
         setLayout(new java.awt.GridLayout(7, 7));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm8.jpg"))); // NOI18N
-        jLabel9.setText("jLabel2");
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel9);
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm17.jpg"))); // NOI18N
-        jLabel25.setText("jLabel2");
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel25);
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm13.jpg"))); // NOI18N
-        jLabel26.setText("jLabel2");
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel26);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm3.jpg"))); // NOI18N
@@ -116,20 +113,16 @@ public class JPanelDificil extends javax.swing.JPanel {
         jLabel11.setText("jLabel2");
         add(jLabel11);
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm15.jpg"))); // NOI18N
-        jLabel29.setText("jLabel28");
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel29);
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm7.jpg"))); // NOI18N
-        jLabel12.setText("jLabel2");
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel12);
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm16.jpg"))); // NOI18N
-        jLabel30.setText("jLabel30");
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm4.jpg"))); // NOI18N
-        jLabel3.setText("jLabel2");
         add(jLabel3);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm1.jpg"))); // NOI18N
@@ -148,20 +141,16 @@ public class JPanelDificil extends javax.swing.JPanel {
         jLabel4.setText("jLabel2");
         add(jLabel4);
 
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm14.jpg"))); // NOI18N
-        jLabel34.setText("jLabel2");
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel34);
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm2.jpg"))); // NOI18N
-        jLabel14.setText("jLabel2");
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel14);
 
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm18.jpg"))); // NOI18N
-        jLabel35.setText("jLabel2");
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel35);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm3.jpg"))); // NOI18N
-        jLabel5.setText("jLabel2");
         add(jLabel5);
 
         jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm18.jpg"))); // NOI18N
@@ -180,20 +169,16 @@ public class JPanelDificil extends javax.swing.JPanel {
         jLabel16.setText("jLabel2");
         add(jLabel16);
 
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm11.jpg"))); // NOI18N
-        jLabel38.setText("jLabel36");
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel38);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm6.jpg"))); // NOI18N
-        jLabel6.setText("jLabel2");
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel6);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm13.jpg"))); // NOI18N
-        jLabel7.setText("jLabel2");
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel7);
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm9.jpg"))); // NOI18N
-        jLabel18.setText("jLabel18");
         add(jLabel18);
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm9.jpg"))); // NOI18N
@@ -212,20 +197,16 @@ public class JPanelDificil extends javax.swing.JPanel {
         jLabel22.setText("jLabel2");
         add(jLabel22);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm2.jpg"))); // NOI18N
-        jLabel8.setText("jLabel2");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel8);
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm12.jpg"))); // NOI18N
-        jLabel23.setText("jLabel2");
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel23);
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm4.jpg"))); // NOI18N
-        jLabel17.setText("jLabel2");
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel17);
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm12.jpg"))); // NOI18N
-        jLabel24.setText("jLabel2");
         add(jLabel24);
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm2.jpg"))); // NOI18N
@@ -244,20 +225,16 @@ public class JPanelDificil extends javax.swing.JPanel {
         jLabel41.setText("jLabel2");
         add(jLabel41);
 
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm4.jpg"))); // NOI18N
-        jLabel42.setText("jLabel2");
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel42);
 
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm7.jpg"))); // NOI18N
-        jLabel43.setText("jLabel2");
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel43);
 
-        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm8.jpg"))); // NOI18N
-        jLabel44.setText("jLabel2");
+        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel44);
 
         jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm9.jpg"))); // NOI18N
-        jLabel45.setText("jLabel2");
         add(jLabel45);
 
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm10.jpg"))); // NOI18N
@@ -276,20 +253,16 @@ public class JPanelDificil extends javax.swing.JPanel {
         jLabel49.setText("jLabel2");
         add(jLabel49);
 
-        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm13.jpg"))); // NOI18N
-        jLabel50.setText("jLabel2");
+        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel50);
 
-        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm14.jpg"))); // NOI18N
-        jLabel51.setText("jLabel2");
+        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel51);
 
-        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm15.jpg"))); // NOI18N
-        jLabel52.setText("jLabel28");
+        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel52);
 
         jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm16.jpg"))); // NOI18N
-        jLabel53.setText("jLabel30");
         add(jLabel53);
 
         jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm17.jpg"))); // NOI18N

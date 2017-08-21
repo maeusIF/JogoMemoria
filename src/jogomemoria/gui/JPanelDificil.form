@@ -22,25 +22,22 @@
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm8.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel25">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm17.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel26">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm13.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
@@ -86,25 +83,22 @@
     <Component class="javax.swing.JLabel" name="jLabel29">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm15.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel28"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm7.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel30">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm16.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel30"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -112,7 +106,6 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/jogomemoria/gui/img/jm4.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel13">
@@ -150,25 +143,22 @@
     <Component class="javax.swing.JLabel" name="jLabel34">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm14.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel14">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm2.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel35">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm18.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -176,7 +166,6 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/jogomemoria/gui/img/jm3.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel37">
@@ -214,25 +203,22 @@
     <Component class="javax.swing.JLabel" name="jLabel38">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm11.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel36"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm6.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm13.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel18">
@@ -240,7 +226,6 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/jogomemoria/gui/img/jm9.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel18"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel19">
@@ -278,25 +263,22 @@
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm2.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel23">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm12.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel17">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm4.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel24">
@@ -304,7 +286,6 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/jogomemoria/gui/img/jm12.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel31">
@@ -342,25 +323,22 @@
     <Component class="javax.swing.JLabel" name="jLabel42">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm4.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel43">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm7.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel44">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm8.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel45">
@@ -368,7 +346,6 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/jogomemoria/gui/img/jm9.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel46">
@@ -406,25 +383,22 @@
     <Component class="javax.swing.JLabel" name="jLabel50">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm13.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel51">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm14.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel52">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm15.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/Virada.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel28"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel53">
@@ -432,7 +406,6 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/jogomemoria/gui/img/jm16.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel30"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel54">
