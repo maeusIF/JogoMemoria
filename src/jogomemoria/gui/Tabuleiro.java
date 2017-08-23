@@ -29,19 +29,19 @@ public class Tabuleiro extends javax.swing.JPanel {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanelFacil1 = new jogomemoria.gui.JPanelFacil();
-        info2 = new jogomemoria.gui.Info();
+        info1 = new jogomemoria.gui.Info();
 
         setLayout(new java.awt.BorderLayout());
 
         jSplitPane1.setLeftComponent(jPanelFacil1);
-        jSplitPane1.setRightComponent(info2);
+        jSplitPane1.setRightComponent(info1);
 
         add(jSplitPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private jogomemoria.gui.Info info2;
+    private jogomemoria.gui.Info info1;
     private jogomemoria.gui.JPanelFacil jPanelFacil1;
     private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables

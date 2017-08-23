@@ -32,7 +32,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="jogomemoria.gui.Info" name="info2">
+        <Component class="jogomemoria.gui.Info" name="info1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout$JSplitPaneConstraintsDescription">
               <JSplitPaneConstraints position="right"/>
