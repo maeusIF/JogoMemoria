@@ -81,6 +81,8 @@ public class JPanelDificil extends javax.swing.JPanel {
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
 
         setLayout(new java.awt.GridLayout(7, 7));
 
@@ -245,6 +247,12 @@ public class JPanelDificil extends javax.swing.JPanel {
 
         jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
         add(jLabel55);
+
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        add(jLabel56);
+
+        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        add(jLabel57);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -299,6 +307,8 @@ public class JPanelDificil extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
