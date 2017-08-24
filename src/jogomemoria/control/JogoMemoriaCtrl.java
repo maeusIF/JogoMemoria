@@ -17,6 +17,9 @@ public class JogoMemoriaCtrl {
     public static final int DIFICIL = 3;
     public static final int MAX_PECAS_PARTIDA = 18;
     public static final int MAX_PECAS_DISPONIVEIS = 20;
+    public static final int QTDE_PECAS_FACIL = 16;
+    public static final int QTDE_PECAS_INTERMEDIARIO = 32;
+    public static final int QTDE_PECAS_DIFICIL = 54;
     
     private boolean jogoiniciado;
     private Timestamp iniciojogo;
