@@ -1,13 +1,14 @@
 package jogomemoria.control;
 
 import java.sql.Timestamp;
-import java.util.Random;
+import jogomemoria.model.PecaTabuleiro;
+
 
 /**
  *
  * @author Prof. Osvandre
  */
-public class JogoMemoriaCtrl {
+public class PecaTabuleiro {
 
     /* ----------------------- CONSTANTES -----------------------*/
     public static final int FACIL = 0;  //Referencia ao nível Fácil 
@@ -20,9 +21,9 @@ public class JogoMemoriaCtrl {
     public static final int JOGADA_CERTA = 0; //Referência a valor que representa jogada válida e certa que marca ponto.
     public static final int JOGADA_ERRADA = 1; //Referência a valor que representa jogada válida e errada, não marcadno ponto.
     public static final int JOGADA_INVALIDA = 2; //Referência a valor que representa jogada inválida. Ou seja, com pelo menos uma posição já ocupada.
-
+    
     public static final int MAX_IMAGENS_PARTIDA = 18; //Máx. de imagens usadas nas partidas
-    public static final int QTDE_IMAGENS_DISPONIVEIS = 20; //Quantidade de imagens disponíveis para o jogo (Sempre maior do que MAX_PECAS_PARTIDA)
+    public static final int QTDE_IMAGENS_DISPONIVEIS= 20; //Quantidade de imagens disponíveis para o jogo (Sempre maior do que MAX_PECAS_PARTIDA)
 
     public static final int QTDE_PECAS_TAB_FACIL = 16; //Referência para a qtde de peças do tabuleiro para o nível Fácil
     public static final int MAX_COL_FACIL = 4;  //Qtde de colunas no tabuleiro para o nível Fácil
@@ -35,7 +36,7 @@ public class JogoMemoriaCtrl {
     public static final int QTDE_PECAS_TAB_DIFICIL = 54; //Referência para a qtde de peças do tabuleiro para o nível Difícil
     public static final int MAX_COL_DIFICIL = 9; //Qtde de colunas no tabuleiro para o nível Difícil
     public static final int MAX_LIN_DIFICIL = 6; //Qtde de linhas no tabuleiro para o nível Difícil
-
+    
     /* ----------------------- ATRIBUTOS -----------------------*/
     private boolean jogoIniciado; //Booleano que indica se a partida foi iniciada ou não.
     private Timestamp inicioPartida; //Registra o momento do início da partida. Para contagem de tempo.
@@ -43,72 +44,49 @@ public class JogoMemoriaCtrl {
     private int pontuacaoAtual;   //Pontuação da partida atual
     private int nivelAtual;       //Nível da partida atual
     private int tabRecordes[][] = {{0, 0, 0}, //Quadro de melhores pontuações por nível (Recordes)
-    {0, 0, 0}, //Linha = Nível e Coluna = Ouro, prata ou bronze.
-    {0, 0, 0}};
+                                   {0, 0, 0}, //Linha = Nível e Coluna = Ouro, prata ou bronze.
+                                   {0, 0, 0}};
     private int acertosPartida;   //Quantidade de acertos na partida
-    private int[] imgsPartida = new int[MAX_IMAGENS_PARTIDA];//Vetor de imagens sorteadas para a partida atual. Considera o tamanho suficiente para o nível difícil
+    private int [] imgsPartida = new int[MAX_IMAGENS_PARTIDA];//Vetor de imagens sorteadas para a partida atual. Considera o tamanho suficiente para o nível difícil
     private int qtdImgsPartida; //Quantidade de imgens usadas na partida. Controla o uso de células do vetor imgsPartida conforme o nível da partida atual.           
     private int tabuleiro[][] = new int[MAX_LIN_DIFICIL][MAX_COL_DIFICIL]; //Matriz que implementa o tabuleiro do jogo onde as imagens estão distribuidas. Considera o tamanho máximo possível de ser usado que é para o nível difícil. Cada célula contém um número referente à imagem que ocupará a posição.
     private int tabControle[][] = new int[MAX_LIN_DIFICIL][MAX_COL_DIFICIL]; //Será usada em conjunto com a matriz tabuleiro[][]. Implementa um controle das jogadas já realizadas e acertadas. Ajuda a atulizar a tela indicando que imagem estará virada (Valor 0 na célula) e que imagem estará aberta (Valor 1). Considera o tamanho máximo possível de ser usado que é para o nível difícil.
-
+    
     /* ----------------------- MÉTODOS -----------------------*/
+    
     /**
-     * Construtor para a classe
+     * Construtor para a  classe
      */
-    public JogoMemoriaCtrl() {
-        boolean jogoIniciado = false;
+    public PecaTabuleiro() {
+        boolean jogoIniciado= false;
         int tempoLimite;
         int acertosPartida;
         int nivelAtual;
         int qtdImgsPartida;
-        /*ATIVIDADE #1 - Implementar um construtor para esta classe. Ele deve
+       /*ATIVIDADE #1 - Implementar um construtor para esta classe. Ele deve
          iniciar todos os atributos pertinentes, da seguinte forma:
            - O jogo deve ser sinalizado como não iniciado;
            - O tempo limite em segundos deverá ser INDEFINIDO;
            - A quantidade de acertos da partida deve ser INDEFINIDO
            - O nível da partida atualdeve ser INDEFINIDO
            - A quantidade de peças usadas na partida deve ser INDEFINIDO pois aindanão se sabe o nível.
-         */
-
+        */
+    
+    
     }
-
+    
+    
+    
     /**
-     * Inicia uma partida do jogo conforme um nível e um tempo limite em
-     * minutos.
-     *
+     * Inicia uma partida do jogo conforme um nível e um tempo limite em minutos.
      * @param nivel - Nível da partida FACIL, INTERMEDIARIO, DIFICIL
-     * @param tempoLimMinutos - Tempo limite em MINUTOS para a partida. Isto
-     * pois na tela projetamos que o usuário só consegue determinar o tempo em
-     * minutos. Contudo, o temporizador será em segundos.
+     * @param tempoLimMinutos - Tempo limite em MINUTOS para a partida. Isto pois na tela
+     * projetamos que o usuário só consegue determinar o tempo em minutos. Contudo,
+     * o temporizador será em segundos. 
      */
-    public void iniciarPartida(int nivel, int tempoLimMinutos) {
-        boolean jogoIniciado = true;
-        tempoLimite = tempoLimite * 60;
-        acertosPartida = 0;
-
-        Random sorteioImg = new Random();
-
-        for (int i = 0; i < MAX_IMAGENS_PARTIDA; i++) {
-            sorteioImg.nextInt();
-            int tabuleiro [][] = {{MAX_LIN_DIFICIL},{MAX_LIN_DIFICIL}};
-            int tabControle [][] = {{0},{0}};
-
-            if (nivelAtual == 0) {
-                nivelAtual = FACIL;
-                qtdImgsPartida = QTDE_PECAS_TAB_FACIL;
-            }
-            if (nivelAtual == 1) {
-                nivelAtual = INTERMEDIARIO;
-                qtdImgsPartida = QTDE_PECAS_TAB_INTERMEDIARIO;
-            }
-            if (nivelAtual == 2) {
-                nivelAtual = DIFICIL;
-
-                qtdImgsPartida = QTDE_PECAS_TAB_DIFICIL;
-            }
-        }
-
-        /*ATIVIDADE #2 - Implementar a iniciação de uma partida. Pense nas variáveis
+    public void iniciarPartida(int nivel, int tempoLimMinutos){
+        
+       /*ATIVIDADE #2 - Implementar a iniciação de uma partida. Pense nas variáveis
         que precisam ter seus valores ajustados no ínício de cada partida:
            - O jogo deve ser sinalizado como iniciado.
            - O tempo limite em segundos deverá ser definido com base na conversão do parãmetro tempoLimMinutos. 
@@ -118,17 +96,21 @@ public class JogoMemoriaCtrl {
            - Sortear imagens para a partida.
            - Distribuir imagens da partida no tabuleiro conforme o nível (preencher o tabuleiro).
            - Zerar todo o tabuleiro de controle.
-         */
+         */    
+        
+        
     }
 
+    
+    
     /**
      * Realiza o sorteio de imagens para a partida, conforme índices de 1 até
-     * MAX_PECAS_DISPONIVEIS. Se MAX_PECAS_DISPONIVEIS = 100 então sorteia o
-     * identificador de cada imagem até obter a quantidade de imagens
+     * MAX_PECAS_DISPONIVEIS. Se MAX_PECAS_DISPONIVEIS = 100 então sorteia 
+     * o identificador de cada imagem até obter a quantidade de imagens 
      * necessárias para a partida (qtdImgsPartida)
      */
-    private void sortearImagensPartida() {
-        /*
+    private void sortearImagensPartida(){
+       /*
        ATIVIDADE #3.
        - Limpe o vetor de imagens da partida pois ele pode conter imagens de
        partidas anteriores.
@@ -148,27 +130,34 @@ public class JogoMemoriaCtrl {
         testando cada item com o valor de X. Se não estiver ainda, insira-o neste vetor e vá
        preenchendo ele. Se X já estiver presente você deve sortear outro número e o proessose repete.
 
-         */
-
+       */
+       
+       
+       
     }
-
+    
+    
+    
     /**
-     * Limpa o vetor de imagens usadas na partida (imgspartida) colocando 0
-     * (ZERO) em cada célula e indicando que está vazia. É usado como parte da
-     * iniciação de cada partida.
-     */
+    * Limpa o vetor de imagens usadas na partida (imgspartida) colocando 0 (ZERO) 
+    * em cada célula e indicando que está vazia.
+    * É usado como parte da iniciação de cada partida.
+    */  
     private void limparImgsPartida() {
-        //ATIVIDADE #3.1 implementar laço para percorrer as células do vetor 
-        //imgsPartida[] e atribuir o valor 0 (ZERO)  a cada célula.  
-
+       //ATIVIDADE #3.1 implementar laço para percorrer as células do vetor 
+       //imgsPartida[] e atribuir o valor 0 (ZERO)  a cada célula.  
+       
+       
     }
-
+    
+    
+    
     /**
-     * Preenche o tabuleiro com duplas ou trios das imagens sorteadas,
-     * dependendo do nível definido para a partida.
+     * Preenche o tabuleiro com duplas ou trios das imagens sorteadas, dependendo
+     * do nível definido para a partida.
      */
     private void preencherTabuleiro() {
-        /*
+          /*
             ATIVIDADE #4.
                - Limpe o tabuleiro da partida pois ele pode conter dados de
                  partidas anteriores.
@@ -183,38 +172,45 @@ public class JogoMemoriaCtrl {
                - Você deve controlar, usando uma variável, qual elemento do vetor imgsPartida[]
                  você está processando. Ou seja você deve processa do primeiro até o último elemento.
  
-         */
-
+            */    
+        
+        
+        
+        
+        
     }
-
-    /**
-     * Limpa os tabuleiros (Tabuleiro de imagens e o de controle) colocando 0
-     * (ZERO) em cada célula, indicando que está vazia. É usado como parte da
-     * iniciação de cada partida.
-     */
+    
+    
+        
+   /**
+    * Limpa os tabuleiros (Tabuleiro de imagens e o de controle) colocando 0 (ZERO) em cada célula, indicando que está vazia.
+    * É usado como parte da iniciação de cada partida.
+    */    
     private void limparTabuleiros() {
-        //ATIVIDADE #4.1.
-        //implementar laços para percorrer as células das matrizes 
-        //tabuleiro[][] e tabControle[][], atribuindo o valor 0 (ZERO)  a cada célula.
-
+       //ATIVIDADE #4.1.
+       //implementar laços para percorrer as células das matrizes 
+       //tabuleiro[][] e tabControle[][], atribuindo o valor 0 (ZERO)  a cada célula.
+       
+       
     }
+    
+    
 
     /**
-     * Tenta realizar uma jogada, envolvendo duas peças de tabuleiro. Os objetos
-     * PecaTabuleiro possuem atributos que representam uma posição (célula) da
-     * matriz referente ao tabuleiro. Estes atributos são Linha e coluna
-     * referentes à posição da peça no tabuleiro. A classe PecaTabuleiro do
-     * pacote jogomemoria.model representa o tipo dos parâmetros.
-     *
+     * Tenta realizar uma jogada, envolvendo duas peças de tabuleiro. 
+     * Os objetos PecaTabuleiro possuem atributos que representam uma posição 
+     * (célula) da matriz referente ao tabuleiro. Estes atributos são Linha e coluna
+     * referentes à posição da peça no tabuleiro.
+     * A classe PecaTabuleiro do pacote jogomemoria.model representa o tipo dos
+     * parâmetros.
      * @param pt1 Primeira peça de tabuleiro (PecaTabuleiro) selecionada.
      * @param pt2 Segunda peça de tabuleiro (PecaTabuleiro) selecionada.
-     * @return int Inteiro representando o resultado da tentativa de jogada.
-     * Refere-se a JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
+     * @return int Inteiro representando o resultado da tentativa de jogada. Refere-se a JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA. 
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2) {
-        int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
-
-        /*
+       int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
+       
+       /*
        ATIVIDADE #5. Implemente este método de forma que ele realizar uma jogada
        com base nas duas peças de tabuleiro recebidas como parâmetro.
        - Verifique se as peças pt1 e pt2 possuem linha e coluna dentro dos 
@@ -233,32 +229,40 @@ public class JogoMemoriaCtrl {
                c) atualize a tabControle[][], marcando as duas peças (pt1 e pt2) como viradas ou abertas (valor 1)
                d) verifique se o jogo finalizou (acertou tudo ou terminou ot empo)
        
-         */
-        return resultado;  //Esta linha irá retornar o resultado da operação
-        // se JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
-        //Na tela teremos condições de fazer ela se comportar 
-        //em função do valor que este método retornar. 
+       */
+       
+       
+       
+       return resultado;  //Esta linha irá retornar o resultado da operação
+                          // se JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
+                          //Na tela teremos condições de fazer ela se comportar 
+                          //em função do valor que este método retornar. 
     }
-
-    /**
+  
+    
+    
+    
+        /**
      * Tenta realizar uma jogada, envolvendo TRÊS peças de tabuleiro em moldes
      * semelhantes ao outro método para duas peças.
-     *
      * @param pt1 Primeira peça de tabuleiro (PecaTabuleiro) selecionada.
      * @param pt2 Segunda peça de tabuleiro (PecaTabuleiro) selecionada.
      * @param pt3 Terceira peça de tabuleiro (PecaTabuleiro) selecionada.
-     * @return int Inteiro representando o resultado da tentativa de jogada.
-     * Refere-se a JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
-     *
+     * @return int Inteiro representando o resultado da tentativa de jogada. Refere-se a JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA. 
+     * 
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2, PecaTabuleiro pt3) {
-        int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
-
-        /*
+       int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
+       
+       /*
        ATIVIDADE #6. Implemente este método de forma semelhante ao da 
        atividade nº 5 mas para o caso de 3 peças.
-         */
-        return resultado;
+       */
+       
+       
+       return resultado;  
     }
-
+    
+    
+    
 }
