@@ -1,5 +1,6 @@
 package jogomemoria.control;
 
+import com.sun.org.apache.xalan.internal.xsltc.compiler.Constants;
 import java.sql.Timestamp;
 import java.util.Random;
 
@@ -24,7 +25,12 @@ public class JogoMemoriaCtrl {
     public static final int MAX_IMAGENS_PARTIDA = 18; //Máx. de imagens usadas nas partidas
     public static final int QTDE_IMAGENS_DISPONIVEIS = 20; //Quantidade de imagens disponíveis para o jogo (Sempre maior do que MAX_PECAS_PARTIDA)
 
-    public static final int QTDE_PECAS_TAB_FACIL = 16; //Referência para a qtde de peças do tabuleiro para o nível Fácil
+    public static final int QTDE_PECAS_TAB_FACIL = 16;
+
+    public static final int QTDE_IMG_FACIL = 8;
+    public static final int QTDE_IMG_INTERMEDIARIO = 18;
+    public static final int QTDE_IMG_DIFICIL = 18;
+
     public static final int MAX_COL_FACIL = 4;  //Qtde de colunas no tabuleiro para o nível Fácil
     public static final int MAX_LIN_FACIL = 4;  //Qtde de linhas no tabuleiro para o nível Fácil      
 
@@ -56,11 +62,11 @@ public class JogoMemoriaCtrl {
      * Construtor para a classe
      */
     public JogoMemoriaCtrl() {
-        boolean jogoIniciado = false;
-        int tempoLimite;
-        int acertosPartida;
-        int nivelAtual;
-        int qtdImgsPartida;
+        jogoIniciado = false;
+        tempoLimite = INDEFINIDO;
+        acertosPartida = INDEFINIDO;
+        nivelAtual = INDEFINIDO;
+        qtdImgsPartida = INDEFINIDO;
         /*ATIVIDADE #1 - Implementar um construtor para esta classe. Ele deve
          iniciar todos os atributos pertinentes, da seguinte forma:
            - O jogo deve ser sinalizado como não iniciado;
@@ -82,52 +88,77 @@ public class JogoMemoriaCtrl {
      * minutos. Contudo, o temporizador será em segundos.
      */
     public void iniciarPartida(int nivel, int tempoLimMinutos) {
-        boolean jogoIniciado = true;
-        tempoLimite = tempoLimite * 60;
+        jogoIniciado = true;
+        tempoLimite = (tempoLimite * 60);
         acertosPartida = 0;
 
         Random sorteioImg = new Random();
 
         for (int i = 0; i < MAX_IMAGENS_PARTIDA; i++) {
             sorteioImg.nextInt();
-            int tabuleiro [][] = {{MAX_LIN_DIFICIL},{MAX_LIN_DIFICIL}};
-            int tabControle [][] = {{0},{0}};
+            int tabuleiro[][] = {{MAX_LIN_DIFICIL}, {MAX_LIN_DIFICIL}};
+            int tabControle[][] = {{0}, {0}};
 
-            if (nivelAtual == 0) {
+            if (nivel == FACIL) {
                 nivelAtual = FACIL;
-                qtdImgsPartida = QTDE_PECAS_TAB_FACIL;
+                qtdImgsPartida = QTDE_IMG_FACIL;
             }
-            if (nivelAtual == 1) {
+            if (nivel == INTERMEDIARIO) {
                 nivelAtual = INTERMEDIARIO;
-                qtdImgsPartida = QTDE_PECAS_TAB_INTERMEDIARIO;
+                qtdImgsPartida = QTDE_IMG_INTERMEDIARIO;
             }
-            if (nivelAtual == 2) {
+            if (nivel == DIFICIL) {
                 nivelAtual = DIFICIL;
-
-                qtdImgsPartida = QTDE_PECAS_TAB_DIFICIL;
+                qtdImgsPartida = QTDE_IMG_DIFICIL;
+            } else {
+                System.out.println("ERRO");//lançar erro
             }
+            sortearImagensPartida();
+            preencherTabuleiro();
+            limparTabuleiros();
+
         }
 
-        /*ATIVIDADE #2 - Implementar a iniciação de uma partida. Pense nas variáveis
-        que precisam ter seus valores ajustados no ínício de cada partida:
-           - O jogo deve ser sinalizado como iniciado.
-           - O tempo limite em segundos deverá ser definido com base na conversão do parãmetro tempoLimMinutos. 
-           - A quantidade de acertos da partida deve ser iniciado. 
-           - O nível da partida atual (nivelAtual) deve ser definido conforme o parâmetro "nivel".
-           - A quantidade de peças usadas na partida deve ser definida com base na interpretação do nível.
-           - Sortear imagens para a partida.
-           - Distribuir imagens da partida no tabuleiro conforme o nível (preencher o tabuleiro).
-           - Zerar todo o tabuleiro de controle.
-         */
+    }
+
+    private int obterNumSorteado(int inicio, int fim) {
+        int n = INDEFINIDO;
+        if ((fim >= inicio) && (inicio >= 0)) {
+            n = inicio + (int) (Math.random() * ((fim - inicio) + 1));
+        }
+
+        return n;
     }
 
     /**
-     * Realiza o sorteio de imagens para a partida, conforme índices de 1 até
-     * MAX_PECAS_DISPONIVEIS. Se MAX_PECAS_DISPONIVEIS = 100 então sorteia o
-     * identificador de cada imagem até obter a quantidade de imagens
+     * obtem um numero sorteado e valido no epçao inicio e fim o inicio minimo é
+     * zero /** Realiza o sorteio de imagens para a partida, conforme índices de
+     * 1 até MAX_PECAS_DISPONIVEIS. Se MAX_PECAS_DISPONIVEIS = 100 então sorteia
+     * o identificador de cada imagem até obter a quantidade de imagens
      * necessárias para a partida (qtdImgsPartida)
      */
     private void sortearImagensPartida() {
+        boolean achou = false;
+        limparImgsPartida();
+        int qtdeSorteadas = 0;
+
+        while (qtdeSorteadas < qtdImgsPartida) {
+            int i = obterNumSorteado(1, QTDE_IMAGENS_DISPONIVEIS);
+            achou = false;
+            for (int k = 0; k < qtdeSorteadas; k++) {
+                if (imgsPartida[k] == i) {
+                    achou = true;
+
+                }
+                break;
+            }
+             if(!achou){
+                imgsPartida[qtdImgsPartida]=i;
+                qtdImgsPartida ++; 
+             }
+             
+        }
+
         /*
        ATIVIDADE #3.
        - Limpe o vetor de imagens da partida pois ele pode conter imagens de
@@ -149,7 +180,6 @@ public class JogoMemoriaCtrl {
        preenchendo ele. Se X já estiver presente você deve sortear outro número e o proessose repete.
 
          */
-
     }
 
     /**
@@ -158,9 +188,12 @@ public class JogoMemoriaCtrl {
      * iniciação de cada partida.
      */
     private void limparImgsPartida() {
-        //ATIVIDADE #3.1 implementar laço para percorrer as células do vetor 
-        //imgsPartida[] e atribuir o valor 0 (ZERO)  a cada célula.  
+        for (int i = 0; i < MAX_IMAGENS_PARTIDA; i++) {
+            imgsPartida[i] = 0;
+            //ATIVIDADE #3.1 implementar laço para percorrer as células do vetor 
+            //imgsPartida[] e atribuir o valor 0 (ZERO)  a cada célula.  
 
+        }
     }
 
     /**
@@ -193,11 +226,16 @@ public class JogoMemoriaCtrl {
      * iniciação de cada partida.
      */
     private void limparTabuleiros() {
-        //ATIVIDADE #4.1.
-        //implementar laços para percorrer as células das matrizes 
-        //tabuleiro[][] e tabControle[][], atribuindo o valor 0 (ZERO)  a cada célula.
+        for (int i = 0; i < MAX_LIN_DIFICIL; i++) {
+            for (int o = 0; o < MAX_COL_DIFICIL; i++) {
+                tabuleiro[i][o] = 0;
+            }
 
+        }
     }
+    //ATIVIDADE #4.1.
+    //implementar laços para percorrer as células das matrizes 
+    //tabuleiro[][] e tabControle[][], atribuindo o valor 0 (ZERO)  a cada célula.
 
     /**
      * Tenta realizar uma jogada, envolvendo duas peças de tabuleiro. Os objetos
