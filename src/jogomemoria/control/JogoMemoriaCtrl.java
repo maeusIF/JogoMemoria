@@ -48,6 +48,8 @@ public class JogoMemoriaCtrl {
     private int tempoLimite;      //Tempo limite para a partida em segundos (minutos * 60)
     private int pontuacaoAtual;   //Pontuação da partida atual
     private int nivelAtual;       //Nível da partida atual
+    private int linhaMax;
+    private int colunaMax;
     private int tabRecordes[][] = {{0, 0, 0}, //Quadro de melhores pontuações por nível (Recordes)
     {0, 0, 0}, //Linha = Nível e Coluna = Ouro, prata ou bronze.
     {0, 0, 0}};
@@ -102,14 +104,20 @@ public class JogoMemoriaCtrl {
             if (nivel == FACIL) {
                 nivelAtual = FACIL;
                 qtdImgsPartida = QTDE_IMG_FACIL;
+                linhaMax = MAX_LIN_FACIL;
+                colunaMax = MAX_COL_FACIL;
             }
             if (nivel == INTERMEDIARIO) {
                 nivelAtual = INTERMEDIARIO;
                 qtdImgsPartida = QTDE_IMG_INTERMEDIARIO;
+                linhaMax = MAX_LIN_INTERMEDIARIO;
+                colunaMax = MAX_COL_INTERMEDIARIO;
             }
             if (nivel == DIFICIL) {
                 nivelAtual = DIFICIL;
                 qtdImgsPartida = QTDE_IMG_DIFICIL;
+                linhaMax = MAX_LIN_DIFICIL;
+                colunaMax = MAX_COL_DIFICIL;
             } else {
                 System.out.println("ERRO");//lançar erro
             }
@@ -152,11 +160,11 @@ public class JogoMemoriaCtrl {
                 }
                 break;
             }
-             if(!achou){
-                imgsPartida[qtdImgsPartida]=i;
-                qtdImgsPartida ++; 
-             }
-             
+            if (!achou) {
+                imgsPartida[qtdImgsPartida] = i;
+                qtdImgsPartida++;
+            }
+
         }
 
         /*
@@ -251,6 +259,19 @@ public class JogoMemoriaCtrl {
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2) {
         int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
+
+        if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() < colunaMax)
+                && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() < colunaMax)) {
+            int vrControle1 = tabControle[pt2.getLinha()][pt2.getColuna()];
+            int vrControle2 = tabControle[pt2.getLinha()][pt2.getColuna()];
+            if ((vrControle1 == 0) && (vrControle2 == 0)) {
+
+            } else {
+
+            }
+        } else {
+
+        }
 
         /*
        ATIVIDADE #5. Implemente este método de forma que ele realizar uma jogada
