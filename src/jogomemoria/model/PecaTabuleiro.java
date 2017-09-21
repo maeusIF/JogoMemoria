@@ -6,6 +6,7 @@ public class PecaTabuleiro {
   private int idImagem;
   private int linha;
   private int coluna;
+  private boolean virado;
 
    public int getNumero() {
         return numero;
@@ -42,5 +43,14 @@ public class PecaTabuleiro {
     
     public void setColuna(int coluna) {
         this.coluna = coluna;
+    }
+
+ 
+    public boolean isVirado() {
+        return virado;
+    }
+    
+    public void setVirado(boolean virado) {
+        this.virado = virado;
     }
 }

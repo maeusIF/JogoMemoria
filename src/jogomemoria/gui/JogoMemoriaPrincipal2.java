@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogomemoria.gui;
+package jogomemoria.gui; 
+
+import jogomemoria.control.JogoMemoriaCtrl;
 
 /**
  *
@@ -15,7 +17,7 @@ public class JogoMemoriaPrincipal2 extends javax.swing.JFrame {
     private JPanelFacil pf = new JPanelFacil();
     private JPanelIntermediario pi = new JPanelIntermediario();
     private JPanelDificil pd = new JPanelDificil();
-    
+    private JogoMemoriaCtrl controle = new JogoMemoriaCtrl();
     
     /**
      * Creates new form JogoMemoriaPrincipal2
