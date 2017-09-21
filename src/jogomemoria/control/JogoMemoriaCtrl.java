@@ -3,6 +3,7 @@ package jogomemoria.control;
 import com.sun.org.apache.xalan.internal.xsltc.compiler.Constants;
 import java.sql.Timestamp;
 import java.util.Random;
+import jogomemoria.model.PecaTabuleiro;
 
 /**
  *
@@ -257,46 +258,24 @@ public class JogoMemoriaCtrl {
      * @return int Inteiro representando o resultado da tentativa de jogada.
      * Refere-se a JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
      */
-    public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2) {
+   public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2) {
         int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
-
-        if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() < colunaMax)
-                && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() < colunaMax)) {
-            int vrControle1 = tabControle[pt2.getLinha()][pt2.getColuna()];
-            int vrControle2 = tabControle[pt2.getLinha()][pt2.getColuna()];
-            if ((vrControle1 == 0) && (vrControle2 == 0)) {
-
-            } else {
-
+        if (pt1.getIdImagem() == pt2.getIdImagem()) {
+            if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax) &&
+                (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)) {
+                int vrControle1 = tabControle[pt1.getLinha()][pt1.getColuna()];
+                int vrControle2 = tabControle[pt2.getLinha()][pt2.getColuna()];
+                if ((vrControle1 == 0) && (vrControle2 == 0)) {
+                    resultado = JOGADA_CERTA;
+                    pontuacaoAtual++;
+                    tabControle[pt1.getLinha()][pt1.getColuna()] = 1;
+                    tabControle[pt2.getLinha()][pt2.getColuna()] = 1;
+                } else {
+                   resultado=JOGADA_ERRADA;
+                }
             }
-        } else {
-
         }
-
-        /*
-       ATIVIDADE #5. Implemente este método de forma que ele realizar uma jogada
-       com base nas duas peças de tabuleiro recebidas como parâmetro.
-       - Verifique se as peças pt1 e pt2 possuem linha e coluna dentro dos 
-       limites do tabuleiro. Por exemplo: linha 1000 não existe pois está além 
-       de MAX_LIN_DIFICIL.
-       Logo, só teste outras condições se os valores de linha e coluna estiverem
-       dentro dos limites.
-       - Depois verifique se as posições de pt1 (linha, coluna) e pt2, na matriz 
-       tabControle[][] possuem ambas valor 0. Se uma delas tiver valor 1 quer dizer
-       que a posição já foi marcada (peça virada e acertada em jogada anterior).
-       - Se ambas as posições tiverem valor 0 em tabControle[][], defina o valor de
-       resultado para JOGADA_ERRADA e em seguida verifique se o idetificador das
-       imagens nas posições pt1 e pt2 da matriz tabuleiro[][] são iguais. Se sim:
-               a) altere o valor da variável resultado para JOGADA_CERTA;
-               b) some um ponto na pontuação atual;
-               c) atualize a tabControle[][], marcando as duas peças (pt1 e pt2) como viradas ou abertas (valor 1)
-               d) verifique se o jogo finalizou (acertou tudo ou terminou ot empo)
-       
-         */
-        return resultado;  //Esta linha irá retornar o resultado da operação
-        // se JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
-        //Na tela teremos condições de fazer ela se comportar 
-        //em função do valor que este método retornar. 
+         return resultado;
     }
 
     /**
