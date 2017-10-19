@@ -79,7 +79,7 @@ public class JogoMemoriaCtrl {
            - O nível da partida atualdeve ser INDEFINIDO
            - A quantidade de peças usadas na partida deve ser INDEFINIDO pois aindanão se sabe o nível.
          */
-/*
+ /*
        UMA CLASSE USA A OUTRA QUANDO UMA USA A VARIAVEL DO TIPO DA OUTRA 
          */
     }
@@ -99,7 +99,7 @@ public class JogoMemoriaCtrl {
         setAcertosPartida(0);
 
         Random sorteioImg = new Random();
-/*
+        /*
        UMA CLASSE USA A OUTRA QUANDO UMA USA A VARIAVEL DO TIPO DA OUTRA 
          */
         for (int i = 0; i < MAX_IMAGENS_PARTIDA; i++) {
@@ -169,7 +169,7 @@ public class JogoMemoriaCtrl {
                 }
                 break;/*
        UMA CLASSE USA A OUTRA QUANDO UMA USA A VARIAVEL DO TIPO DA OUTRA 
-         */
+                 */
             }
             if (!achou) {
                 imgsPartida[qtdImgsPartida] = i;
@@ -215,7 +215,7 @@ public class JogoMemoriaCtrl {
         }
     }/*
        UMA CLASSE USA A OUTRA QUANDO UMA USA A VARIAVEL DO TIPO DA OUTRA 
-         */
+     */
 
     /**
      * Preenche o tabuleiro com duplas ou trios das imagens sorteadas,
@@ -283,7 +283,7 @@ public class JogoMemoriaCtrl {
     //tabuleiro[][] e tabControle[][], atribuindo o valor 0 (ZERO)  a cada célula.
 /*
        UMA CLASSE USA A OUTRA QUANDO UMA USA A VARIAVEL DO TIPO DA OUTRA 
-         */
+     */
     /**
      * Tenta realizar uma jogada, envolvendo duas peças de tabuleiro. Os objetos
      * PecaTabuleiro possuem atributos que representam uma posição (célula) da
@@ -327,7 +327,7 @@ public class JogoMemoriaCtrl {
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2, PecaTabuleiro pt3) {
         int resultado = JOGADA_ERRADA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
-        if (pt1.getIdImagem() == pt2.getIdImagem() && pt1.getIdImagem() == pt3.getIdImagem()){
+        if (pt1.getIdImagem() == pt2.getIdImagem() && pt1.getIdImagem() == pt3.getIdImagem()) {
             if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
                     && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)
                     && (pt3.getLinha() <= linhaMax) && (pt3.getColuna() <= colunaMax)) {
@@ -335,8 +335,8 @@ public class JogoMemoriaCtrl {
                     resultado = JOGADA_CERTA;
                     setPontuacaoAtual(getPontuacaoAtual() + 1);
                     pt1.setVirado(true);
-                    pt2.setVirado(true); 
-                    pt3.setVirado(true); 
+                    pt2.setVirado(true);
+                    pt3.setVirado(true);
                 } else {
                     resultado = JOGADA_INVALIDA;
                 }
@@ -450,4 +450,4 @@ public class JogoMemoriaCtrl {
 }
 /*
        UMA CLASSE USA A OUTRA QUANDO UMA USA A VARIAVEL DO TIPO DA OUTRA 
-         */
+ */
