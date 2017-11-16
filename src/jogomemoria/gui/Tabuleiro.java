@@ -5,6 +5,8 @@
  */
 package jogomemoria.gui;
 
+import javax.swing.JSplitPane;
+
 /**
  *
  * @author mathe
@@ -12,10 +14,21 @@ package jogomemoria.gui;
 public class Tabuleiro extends javax.swing.JPanel {
 
     /**
+     * @return the sppTabuleiro
+     */
+    public javax.swing.JSplitPane getSppTabuleiro() {
+        return sppTabuleiro;
+    }
+
+    /**
      * Creates new form Infos
      */
     public Tabuleiro() {
         initComponents();
+    }
+
+    public JSplitPane getSPPTabuleiro() {
+        return getSppTabuleiro();
     }
 
     /**
@@ -27,22 +40,39 @@ public class Tabuleiro extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
+        sppTabuleiro = new javax.swing.JSplitPane();
         jPanelFacil1 = new jogomemoria.gui.JPanelFacil();
         info1 = new jogomemoria.gui.Info();
+        jPanel1 = new javax.swing.JPanel();
+        sppTabuleiro1 = new javax.swing.JSplitPane();
+        jPanelFacil2 = new jogomemoria.gui.JPanelFacil();
+        info2 = new jogomemoria.gui.Info();
 
         setLayout(new java.awt.BorderLayout());
 
-        jSplitPane1.setLeftComponent(jPanelFacil1);
-        jSplitPane1.setRightComponent(info1);
+        sppTabuleiro.setLeftComponent(jPanelFacil1);
+        sppTabuleiro.setRightComponent(info1);
 
-        add(jSplitPane1, java.awt.BorderLayout.CENTER);
+        add(sppTabuleiro, java.awt.BorderLayout.CENTER);
+
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        sppTabuleiro1.setLeftComponent(jPanelFacil2);
+        sppTabuleiro1.setRightComponent(info2);
+
+        jPanel1.add(sppTabuleiro1, java.awt.BorderLayout.CENTER);
+
+        add(jPanel1, java.awt.BorderLayout.PAGE_START);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private jogomemoria.gui.Info info1;
+    private jogomemoria.gui.Info info2;
+    private javax.swing.JPanel jPanel1;
     private jogomemoria.gui.JPanelFacil jPanelFacil1;
-    private javax.swing.JSplitPane jSplitPane1;
+    private jogomemoria.gui.JPanelFacil jPanelFacil2;
+    private javax.swing.JSplitPane sppTabuleiro;
+    private javax.swing.JSplitPane sppTabuleiro1;
     // End of variables declaration//GEN-END:variables
 }

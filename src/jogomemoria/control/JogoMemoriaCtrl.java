@@ -132,7 +132,7 @@ public class JogoMemoriaCtrl {
             }
             sortearImagensPartida();
             preencherTabuleiro();
-            limparTabuleiro();
+          
 
         }
 
@@ -172,8 +172,8 @@ public class JogoMemoriaCtrl {
                  */
             }
             if (!achou) {
-                imgsPartida[qtdImgsPartida] = i;
-                qtdImgsPartida++;
+                imgsPartida[qtdeSorteadas] = i;
+                qtdeSorteadas++;
             }
 
         }
@@ -263,6 +263,7 @@ public class JogoMemoriaCtrl {
                  você está processando. Ou seja você deve processa do primeiro até o último elemento.
  
          */
+        
     }
 
     /**
@@ -272,7 +273,7 @@ public class JogoMemoriaCtrl {
      */
     private void limparTabuleiro() {
         for (int i = 0; i < MAX_LIN_DIFICIL; i++) {
-            for (int o = 0; o < MAX_COL_DIFICIL; i++) {
+            for (int o = 0; o < MAX_COL_DIFICIL; o++) {
                 getTabuleiro()[i][o] = null;
             }
 
