@@ -6,6 +6,9 @@
 package jogomemoria.gui;
 
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import jogomemoria.control.JogoMemoriaCtrl;
+import jogomemoria.model.PecaTabuleiro;
 
 /**
  *
@@ -13,9 +16,153 @@ import javax.swing.ImageIcon;
  */
 public class JPanelFacil extends javax.swing.JPanel {
 
-    /**
-     * @return the lblImg00
-     */
+    private JogoMemoriaCtrl controle;
+
+    PecaTabuleiro ptSel1;
+    PecaTabuleiro ptSel2;
+    int pecasSelecionadas;
+
+    JPanelFacil() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void mostrarTabuleiro(boolean inicioJogo) {
+        PecaTabuleiro pctb[][] = controle.getTabuleiro();
+        int idImg;
+
+        ImageIcon imgDuvida = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"));
+        if (inicioJogo || pctb[0][0].isVirado()) {
+            idImg = pctb[0][0].getIdImagem();
+            ImageIcon img00 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg00()).setIcon(img00);
+        } else {
+            (getLblImg00()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[0][1].isVirado()) {
+            idImg = pctb[0][1].getIdImagem();
+            ImageIcon img01 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg01()).setIcon(img01);
+        } else {
+            (getLblImg01()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[0][2].isVirado()) {
+            idImg = pctb[0][2].getIdImagem();
+            ImageIcon img02 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg02()).setIcon(img02);
+        } else {
+            (getLblImg02()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[0][3].isVirado()) {
+            idImg = pctb[0][3].getIdImagem();
+            ImageIcon img03 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg03()).setIcon(img03);
+        } else {
+            (getLblImg03()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[1][0].isVirado()) {
+            idImg = pctb[1][0].getIdImagem();
+            ImageIcon img10 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg10()).setIcon(img10);
+        } else {
+            (getLblImg10()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[1][1].isVirado()) {
+            idImg = pctb[1][1].getIdImagem();
+            ImageIcon img11 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg11()).setIcon(img11);
+        } else {
+            (getLblImg11()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[1][2].isVirado()) {
+            idImg = pctb[1][2].getIdImagem();
+            ImageIcon img12 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg12()).setIcon(img12);
+        } else {
+            (getLblImg12()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[1][3].isVirado()) {
+            idImg = pctb[1][3].getIdImagem();
+            ImageIcon img13 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg13()).setIcon(img13);
+        } else {
+            (getLblImg13()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][0].isVirado()) {
+            idImg = pctb[2][0].getIdImagem();
+            ImageIcon img20 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg20()).setIcon(img20);
+        } else {
+            (getLblImg20()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][1].isVirado()) {
+            idImg = pctb[2][1].getIdImagem();
+            ImageIcon img21 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg21()).setIcon(img21);
+        } else {
+            (getLblImg21()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][2].isVirado()) {
+            idImg = pctb[2][2].getIdImagem();
+            ImageIcon img22 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg22()).setIcon(img22);
+        } else {
+            (getLblImg22()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][3].isVirado()) {
+            idImg = pctb[2][3].getIdImagem();
+            ImageIcon img23 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg23()).setIcon(img23);
+        } else {
+            (getLblImg23()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][0].isVirado()) {
+            idImg = pctb[3][0].getIdImagem();
+            ImageIcon img30 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg30()).setIcon(img30);
+        } else {
+            (getLblImg30()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][1].isVirado()) {
+            idImg = pctb[3][1].getIdImagem();
+            ImageIcon img31 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg31()).setIcon(img31);
+        } else {
+            (getLblImg31()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][2].isVirado()) {
+            idImg = pctb[3][2].getIdImagem();
+            ImageIcon img32 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg32()).setIcon(img32);
+        } else {
+            (getLblImg32()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][3].isVirado()) {
+            idImg = pctb[3][3].getIdImagem();
+            ImageIcon img33 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg33()).setIcon(img33);
+        } else {
+            (getLblImg33()).setIcon(imgDuvida);
+        }
+    }
+
+    private void tentarJogada(int linha, int coluna, JLabel rotuloImagem) {
+
+    }
+
     public javax.swing.JLabel getLblImg00() {
         return lblImg00;
     }
@@ -240,8 +387,10 @@ public class JPanelFacil extends javax.swing.JPanel {
     /**
      * Creates new form JPanelIniciante
      */
-    public JPanelFacil() {
+    public JPanelFacil(JogoMemoriaCtrl ctrl) {
+
         initComponents();
+        controle = ctrl;
     }
 
     /**
@@ -249,13 +398,11 @@ public class JPanelFacil extends javax.swing.JPanel {
      * WARNING: Do NOT modify this code. The content of this method is always
      * regenerated by the Form Editor.
      */
-    
-    public void viraCarta(){
-    ImageIcon novaIMG = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm1.jpg"));
+    public void viraCarta() {
+        ImageIcon novaIMG = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm1.jpg"));
         getLblImg32().setIcon(novaIMG);
-}
-    
-    
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -410,67 +557,67 @@ public class JPanelFacil extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblImg32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg32MouseClicked
-        viraCarta();
+        tentarJogada(3, 2, lblImg32);
     }//GEN-LAST:event_lblImg32MouseClicked
 
     private void lblImg00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg00MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(0, 0, lblImg00);        // TODO add your handling code here:
     }//GEN-LAST:event_lblImg00MouseClicked
 
     private void lblImg01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg01MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(0, 1, lblImg01);    // TODO add your handling code here:
     }//GEN-LAST:event_lblImg01MouseClicked
 
     private void lblImg21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg21MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 1, lblImg21);     // TODO add your handling code here:
     }//GEN-LAST:event_lblImg21MouseClicked
 
     private void lblImg12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg12MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 2, lblImg12);    // TODO add your handling code here:
     }//GEN-LAST:event_lblImg12MouseClicked
 
     private void lblImg02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg02MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(0, 2, lblImg02);    // TODO add your handling code here:
     }//GEN-LAST:event_lblImg02MouseClicked
 
     private void lblImg13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg13MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 3, lblImg13);    // TODO add your handling code here:
     }//GEN-LAST:event_lblImg13MouseClicked
 
     private void lblImg23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg23MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 3, lblImg23);   // TODO add your handling code here:
     }//GEN-LAST:event_lblImg23MouseClicked
 
     private void lblImg03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg03MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(0, 3, lblImg03);   // TODO add your handling code here:
     }//GEN-LAST:event_lblImg03MouseClicked
 
     private void lblImg10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg10MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 0, lblImg10);   // TODO add your handling code here:
     }//GEN-LAST:event_lblImg10MouseClicked
 
     private void lblImg33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg33MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 3, lblImg33);    // TODO add your handling code here:
     }//GEN-LAST:event_lblImg33MouseClicked
 
     private void lblImg22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg22MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 2, lblImg22);   // TODO add your handling code here:
     }//GEN-LAST:event_lblImg22MouseClicked
 
     private void lblImg11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg11MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 1, lblImg11);    // TODO add your handling code here:
     }//GEN-LAST:event_lblImg11MouseClicked
 
     private void lblImg20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg20MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 0, lblImg20);    // TODO add your handling code here:
     }//GEN-LAST:event_lblImg20MouseClicked
 
     private void lblImg30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg30MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 0, lblImg30);   // TODO add your handling code here:
     }//GEN-LAST:event_lblImg30MouseClicked
 
     private void lblImg31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg31MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 1, lblImg31);  // TODO add your handling code here:
     }//GEN-LAST:event_lblImg31MouseClicked
 
 

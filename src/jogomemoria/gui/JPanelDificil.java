@@ -5,6 +5,8 @@
  */
 package jogomemoria.gui;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author mathe
@@ -14,6 +16,9 @@ public class JPanelDificil extends javax.swing.JPanel {
     /**
      * @return the lblImg00
      */
+     private void tentarJogada(int linha, int coluna, JLabel rotuloImagem){
+        
+    }
     public javax.swing.JLabel getLblImg00() {
         return lblImg00;
     }
@@ -871,173 +876,677 @@ public class JPanelDificil extends javax.swing.JPanel {
         setLayout(new java.awt.GridLayout(7, 7));
 
         lblImg00.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg00.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg00MouseClicked(evt);
+            }
+        });
         add(lblImg00);
 
         lblImg01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg01MouseClicked(evt);
+            }
+        });
         add(lblImg01);
 
         lblImg02.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg02.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg02MouseClicked(evt);
+            }
+        });
         add(lblImg02);
 
         lblImg03.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg03.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg03MouseClicked(evt);
+            }
+        });
         add(lblImg03);
 
         lblImg04.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg04.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg04MouseClicked(evt);
+            }
+        });
         add(lblImg04);
 
         lblImg05.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg05.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg05MouseClicked(evt);
+            }
+        });
         add(lblImg05);
 
         lblImg06.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg06.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg06MouseClicked(evt);
+            }
+        });
         add(lblImg06);
 
         lblImg07.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg07.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg07MouseClicked(evt);
+            }
+        });
         add(lblImg07);
 
         lblImg10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg10MouseClicked(evt);
+            }
+        });
         add(lblImg10);
 
         lblImg11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg11MouseClicked(evt);
+            }
+        });
         add(lblImg11);
 
         lblImg12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg12MouseClicked(evt);
+            }
+        });
         add(lblImg12);
 
         lblImg13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg13MouseClicked(evt);
+            }
+        });
         add(lblImg13);
 
         lblImg14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg14MouseClicked(evt);
+            }
+        });
         add(lblImg14);
 
         lblImg15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg15MouseClicked(evt);
+            }
+        });
         add(lblImg15);
 
         lblImg16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg16MouseClicked(evt);
+            }
+        });
         add(lblImg16);
 
         lblImg17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg17MouseClicked(evt);
+            }
+        });
         add(lblImg17);
 
         lblImg20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg20MouseClicked(evt);
+            }
+        });
         add(lblImg20);
 
         lblImg21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg21MouseClicked(evt);
+            }
+        });
         add(lblImg21);
 
         lblImg22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg22MouseClicked(evt);
+            }
+        });
         add(lblImg22);
 
         lblImg23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg23MouseClicked(evt);
+            }
+        });
         add(lblImg23);
 
         lblImg24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg24MouseClicked(evt);
+            }
+        });
         add(lblImg24);
 
         lblImg25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg25MouseClicked(evt);
+            }
+        });
         add(lblImg25);
 
         lblImg26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg26MouseClicked(evt);
+            }
+        });
         add(lblImg26);
 
         lblImg27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg27MouseClicked(evt);
+            }
+        });
         add(lblImg27);
 
         lblImg30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg30MouseClicked(evt);
+            }
+        });
         add(lblImg30);
 
         lblImg31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg31.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg31MouseClicked(evt);
+            }
+        });
         add(lblImg31);
 
         lblImg32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg32.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg32MouseClicked(evt);
+            }
+        });
         add(lblImg32);
 
         lblImg33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg33.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg33MouseClicked(evt);
+            }
+        });
         add(lblImg33);
 
         lblImg34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg34.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg34MouseClicked(evt);
+            }
+        });
         add(lblImg34);
 
         lblImg35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg35.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg35MouseClicked(evt);
+            }
+        });
         add(lblImg35);
 
         lblImg36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg36.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg36MouseClicked(evt);
+            }
+        });
         add(lblImg36);
 
         lblImg37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg37MouseClicked(evt);
+            }
+        });
         add(lblImg37);
 
         lblImg40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg40.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg40MouseClicked(evt);
+            }
+        });
         add(lblImg40);
 
         lblImg41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg41MouseClicked(evt);
+            }
+        });
         add(lblImg41);
 
         lblImg42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg42.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg42MouseClicked(evt);
+            }
+        });
         add(lblImg42);
 
         lblImg43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg43.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg43MouseClicked(evt);
+            }
+        });
         add(lblImg43);
 
         lblImg44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg44.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg44MouseClicked(evt);
+            }
+        });
         add(lblImg44);
 
         lblImg45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg45.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg45MouseClicked(evt);
+            }
+        });
         add(lblImg45);
 
         lblImg46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg46.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg46MouseClicked(evt);
+            }
+        });
         add(lblImg46);
 
         lblImg47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg47.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg47MouseClicked(evt);
+            }
+        });
         add(lblImg47);
 
         lblImg50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg50.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg50MouseClicked(evt);
+            }
+        });
         add(lblImg50);
 
         lblImg51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg51.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg51MouseClicked(evt);
+            }
+        });
         add(lblImg51);
 
         lblImg52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg52.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg52MouseClicked(evt);
+            }
+        });
         add(lblImg52);
 
         lblImg53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg53.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg53MouseClicked(evt);
+            }
+        });
         add(lblImg53);
 
         lblImg54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg54.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg54MouseClicked(evt);
+            }
+        });
         add(lblImg54);
 
         lblImg55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg55.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg55MouseClicked(evt);
+            }
+        });
         add(lblImg55);
 
         lblImg56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg56.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg56MouseClicked(evt);
+            }
+        });
         add(lblImg56);
 
         lblImg57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg57.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg57MouseClicked(evt);
+            }
+        });
         add(lblImg57);
 
         lblImg60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg60.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg60MouseClicked(evt);
+            }
+        });
         add(lblImg60);
 
         lblImg61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg61.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg61MouseClicked(evt);
+            }
+        });
         add(lblImg61);
 
         lblImg62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg62.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg62MouseClicked(evt);
+            }
+        });
         add(lblImg62);
 
         lblImg63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg63.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg63MouseClicked(evt);
+            }
+        });
         add(lblImg63);
 
         lblImg64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg64.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg64MouseClicked(evt);
+            }
+        });
         add(lblImg64);
 
         lblImg65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg65.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg65MouseClicked(evt);
+            }
+        });
         add(lblImg65);
 
         lblImg66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg66.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg66MouseClicked(evt);
+            }
+        });
         add(lblImg66);
 
         lblImg67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"))); // NOI18N
+        lblImg67.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblImg67MouseClicked(evt);
+            }
+        });
         add(lblImg67);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblImg00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg00MouseClicked
+       tentarJogada(0, 0,lblImg00);   // TODO add your handling code here:
+    }//GEN-LAST:event_lblImg00MouseClicked
+
+    private void lblImg10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg10MouseClicked
+        tentarJogada(1, 0,lblImg10); // TODO add your handling code here:
+    }//GEN-LAST:event_lblImg10MouseClicked
+
+    private void lblImg20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg20MouseClicked
+       tentarJogada(2, 0,lblImg20);  // TODO add your handling code here:
+    }//GEN-LAST:event_lblImg20MouseClicked
+
+    private void lblImg30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg30MouseClicked
+       tentarJogada(3, 0,lblImg30);  // TODO add your handling code here:
+    }//GEN-LAST:event_lblImg30MouseClicked
+
+    private void lblImg40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg40MouseClicked
+        tentarJogada(4, 0,lblImg40); // TODO add your handling code here:
+    }//GEN-LAST:event_lblImg40MouseClicked
+
+    private void lblImg50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg50MouseClicked
+        tentarJogada(5, 0,lblImg50); // TODO add your handling code here:
+    }//GEN-LAST:event_lblImg50MouseClicked
+
+    private void lblImg60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg60MouseClicked
+       tentarJogada(6, 0,lblImg60);  // TODO add your handling code here:
+    }//GEN-LAST:event_lblImg60MouseClicked
+
+    private void lblImg01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg01MouseClicked
+         tentarJogada(0, 1,lblImg01);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg01MouseClicked
+
+    private void lblImg11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg11MouseClicked
+        tentarJogada(1, 1,lblImg11); // TODO add your handling code here:
+    }//GEN-LAST:event_lblImg11MouseClicked
+
+    private void lblImg21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg21MouseClicked
+         tentarJogada(2, 1,lblImg21);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg21MouseClicked
+
+    private void lblImg31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg31MouseClicked
+         tentarJogada(3, 1,lblImg31);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg31MouseClicked
+
+    private void lblImg41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg41MouseClicked
+         tentarJogada(4, 1,lblImg41);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg41MouseClicked
+
+    private void lblImg51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg51MouseClicked
+         tentarJogada(5, 1,lblImg51);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg51MouseClicked
+
+    private void lblImg61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg61MouseClicked
+         tentarJogada(6, 1,lblImg61);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg61MouseClicked
+
+    private void lblImg02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg02MouseClicked
+         tentarJogada(0, 2,lblImg02);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg02MouseClicked
+
+    private void lblImg12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg12MouseClicked
+         tentarJogada(1, 2,lblImg12);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg12MouseClicked
+
+    private void lblImg22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg22MouseClicked
+         tentarJogada(2, 2,lblImg22);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg22MouseClicked
+
+    private void lblImg32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg32MouseClicked
+         tentarJogada(3, 2,lblImg32);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg32MouseClicked
+
+    private void lblImg42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg42MouseClicked
+         tentarJogada(4, 2,lblImg42);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg42MouseClicked
+
+    private void lblImg52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg52MouseClicked
+         tentarJogada(5, 2,lblImg52);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg52MouseClicked
+
+    private void lblImg62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg62MouseClicked
+         tentarJogada(6, 2,lblImg62);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg62MouseClicked
+
+    private void lblImg03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg03MouseClicked
+         tentarJogada(0, 3,lblImg03);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg03MouseClicked
+
+    private void lblImg13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg13MouseClicked
+         tentarJogada(1, 3,lblImg13);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg13MouseClicked
+
+    private void lblImg23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg23MouseClicked
+         tentarJogada(2, 3,lblImg23);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg23MouseClicked
+
+    private void lblImg33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg33MouseClicked
+         tentarJogada(3, 3,lblImg33);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg33MouseClicked
+
+    private void lblImg43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg43MouseClicked
+         tentarJogada(4, 3,lblImg43);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg43MouseClicked
+
+    private void lblImg53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg53MouseClicked
+         tentarJogada(5, 3,lblImg53);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg53MouseClicked
+
+    private void lblImg63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg63MouseClicked
+         tentarJogada(6, 3,lblImg63);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg63MouseClicked
+
+    private void lblImg04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg04MouseClicked
+         tentarJogada(0, 4,lblImg04);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg04MouseClicked
+
+    private void lblImg14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg14MouseClicked
+         tentarJogada(1, 4,lblImg14);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg14MouseClicked
+
+    private void lblImg24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg24MouseClicked
+         tentarJogada(2, 4,lblImg24);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg24MouseClicked
+
+    private void lblImg34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg34MouseClicked
+         tentarJogada(3, 4,lblImg34);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg34MouseClicked
+
+    private void lblImg44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg44MouseClicked
+         tentarJogada(4, 4,lblImg44);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg44MouseClicked
+
+    private void lblImg54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg54MouseClicked
+         tentarJogada(5, 4,lblImg54);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg54MouseClicked
+
+    private void lblImg64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg64MouseClicked
+         tentarJogada(6, 4,lblImg64);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg64MouseClicked
+
+    private void lblImg05MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg05MouseClicked
+         tentarJogada(0, 5,lblImg05);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg05MouseClicked
+
+    private void lblImg15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg15MouseClicked
+         tentarJogada(1, 5,lblImg15);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg15MouseClicked
+
+    private void lblImg25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg25MouseClicked
+         tentarJogada(2, 5,lblImg25);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg25MouseClicked
+
+    private void lblImg35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg35MouseClicked
+         tentarJogada(3, 5,lblImg35);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg35MouseClicked
+
+    private void lblImg45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg45MouseClicked
+         tentarJogada(4, 5,lblImg45);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg45MouseClicked
+
+    private void lblImg55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg55MouseClicked
+         tentarJogada(5, 5,lblImg55);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg55MouseClicked
+
+    private void lblImg65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg65MouseClicked
+         tentarJogada(6, 5,lblImg65);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg65MouseClicked
+
+    private void lblImg06MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg06MouseClicked
+         tentarJogada(0, 6,lblImg06);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg06MouseClicked
+
+    private void lblImg16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg16MouseClicked
+         tentarJogada(1, 6,lblImg16);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg16MouseClicked
+
+    private void lblImg26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg26MouseClicked
+         tentarJogada(2, 6,lblImg26);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg26MouseClicked
+
+    private void lblImg36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg36MouseClicked
+         tentarJogada(3, 6,lblImg36);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg36MouseClicked
+
+    private void lblImg46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg46MouseClicked
+         tentarJogada(4, 6,lblImg46);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg46MouseClicked
+
+    private void lblImg56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg56MouseClicked
+         tentarJogada(5, 6,lblImg56);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg56MouseClicked
+
+    private void lblImg66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg66MouseClicked
+         tentarJogada(6, 6,lblImg66);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg66MouseClicked
+
+    private void lblImg07MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg07MouseClicked
+         tentarJogada(0, 7,lblImg07);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg07MouseClicked
+
+    private void lblImg17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg17MouseClicked
+         tentarJogada(1, 7,lblImg17);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg17MouseClicked
+
+    private void lblImg27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg27MouseClicked
+         tentarJogada(2, 7,lblImg27);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg27MouseClicked
+
+    private void lblImg37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg37MouseClicked
+         tentarJogada(3, 7,lblImg37);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg37MouseClicked
+
+    private void lblImg47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg47MouseClicked
+         tentarJogada(4, 7,lblImg47);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg47MouseClicked
+
+    private void lblImg57MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg57MouseClicked
+         tentarJogada(5, 7,lblImg57);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg57MouseClicked
+
+    private void lblImg67MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg67MouseClicked
+         tentarJogada(6, 7,lblImg67);// TODO add your handling code here:
+    }//GEN-LAST:event_lblImg67MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
