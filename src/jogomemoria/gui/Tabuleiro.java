@@ -17,7 +17,7 @@ public class Tabuleiro extends javax.swing.JPanel {
      * @return the sppTabuleiro
      */
     public javax.swing.JSplitPane getSppTabuleiro() {
-        return sppTabuleiro;
+        return sppTabuleiro1;
     }
 
     /**
@@ -40,25 +40,17 @@ public class Tabuleiro extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        sppTabuleiro = new javax.swing.JSplitPane();
-        jPanelFacil1 = new jogomemoria.gui.JPanelFacil();
-        info1 = new jogomemoria.gui.Info();
+        jogoMemoriaPrincipal1 = new jogomemoria.gui.JogoMemoriaPrincipal();
+        jPanelDificil1 = new jogomemoria.gui.JPanelDificil();
         jPanel1 = new javax.swing.JPanel();
         sppTabuleiro1 = new javax.swing.JSplitPane();
-        jPanelFacil2 = new jogomemoria.gui.JPanelFacil();
-        info2 = new jogomemoria.gui.Info();
+        info1 = new jogomemoria.gui.Info();
 
         setLayout(new java.awt.BorderLayout());
 
-        sppTabuleiro.setLeftComponent(jPanelFacil1);
-        sppTabuleiro.setRightComponent(info1);
-
-        add(sppTabuleiro, java.awt.BorderLayout.CENTER);
-
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        sppTabuleiro1.setLeftComponent(jPanelFacil2);
-        sppTabuleiro1.setRightComponent(info2);
+        sppTabuleiro1.setLeftComponent(info1);
 
         jPanel1.add(sppTabuleiro1, java.awt.BorderLayout.CENTER);
 
@@ -68,11 +60,9 @@ public class Tabuleiro extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private jogomemoria.gui.Info info1;
-    private jogomemoria.gui.Info info2;
     private javax.swing.JPanel jPanel1;
-    private jogomemoria.gui.JPanelFacil jPanelFacil1;
-    private jogomemoria.gui.JPanelFacil jPanelFacil2;
-    private javax.swing.JSplitPane sppTabuleiro;
+    private jogomemoria.gui.JPanelDificil jPanelDificil1;
+    private jogomemoria.gui.JogoMemoriaPrincipal jogoMemoriaPrincipal1;
     private javax.swing.JSplitPane sppTabuleiro1;
     // End of variables declaration//GEN-END:variables
 }

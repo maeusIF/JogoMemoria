@@ -24,7 +24,7 @@ public class JogoMemoriaCtrl {
     public static final int JOGADA_INVALIDA = 2; //Referência a valor que representa jogada inválida. Ou seja, com pelo menos uma posição já ocupada.
 
     public static final int MAX_IMAGENS_PARTIDA = 18; //Máx. de imagens usadas nas partidas
-    public static final int QTDE_IMAGENS_DISPONIVEIS = 20; //Quantidade de imagens disponíveis para o jogo (Sempre maior do que MAX_PECAS_PARTIDA)
+    public static final int QTDE_IMAGENS_DISPONIVEIS = 18; //Quantidade de imagens disponíveis para o jogo (Sempre maior do que MAX_PECAS_PARTIDA)
 
     public static final int QTDE_PECAS_TAB_FACIL = 16;
 
@@ -224,7 +224,6 @@ public class JogoMemoriaCtrl {
     private void preencherTabuleiro() {
         limparTabuleiro();
         int num = 0;
-        int qtdePecasPorImg = INDEFINIDO;
 
         for (int i = 0; i < qtdImgsPartida; i++) {
             for (int j = 0; j < qtdePecasPorImg; j++) {
@@ -302,7 +301,8 @@ public class JogoMemoriaCtrl {
         if (pt1.getIdImagem() == pt2.getIdImagem()) {
             if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
                     && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)) {
-                if ((!pt1.isVirado()) && (!pt2.isVirado())) {
+                if ((!pt1.isVirado()) && (!pt2.isVirado())
+                        && (pt1.getNumero() != pt2.getNumero())) {
                     resultado = JOGADA_CERTA;
                     setPontuacaoAtual(getPontuacaoAtual() + 1);
                     pt1.setVirado(true);

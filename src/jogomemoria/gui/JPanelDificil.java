@@ -5,7 +5,11 @@
  */
 package jogomemoria.gui;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import jogomemoria.control.JogoMemoriaCtrl;
+import jogomemoria.model.PecaTabuleiro;
 
 /**
  *
@@ -13,12 +17,470 @@ import javax.swing.JLabel;
  */
 public class JPanelDificil extends javax.swing.JPanel {
 
+    private JogoMemoriaCtrl controle;
+
+    PecaTabuleiro ptSel1;
+    PecaTabuleiro ptSel2;
+    int pecasSelecionadas = 0;
+
     /**
      * @return the lblImg00
      */
-     private void tentarJogada(int linha, int coluna, JLabel rotuloImagem){
-        
+    private void tentarJogada(int linha, int coluna, JLabel rotuloImagem) {
+        PecaTabuleiro pt[][] = controle.getTabuleiro();
+
+        int idImg = pt[linha][coluna].getIdImagem();
+        ImageIcon img = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+        rotuloImagem.setIcon(img);
+
+        if (pecasSelecionadas == 0) {
+            ptSel1 = pt[linha][coluna];
+            pecasSelecionadas++;
+        } else if (pecasSelecionadas == 1) {
+            ptSel2 = pt[linha][coluna];
+            int result = controle.realizarJogada(ptSel1, ptSel2);
+            if (result == controle.JOGADA_CERTA) {
+                JOptionPane.showMessageDialog(this, "Muito bem", "Resultado da Jogada", JOptionPane.INFORMATION_MESSAGE);
+            } else if (result == controle.JOGADA_ERRADA) {
+                JOptionPane.showMessageDialog(this, "Você errou, tente novamente", "Resultado da Jogada", JOptionPane.INFORMATION_MESSAGE);
+            } else if (result == controle.JOGADA_INVALIDA) {
+                JOptionPane.showMessageDialog(this, "Isso nao vale", "Resultado da Jogada", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
     }
+
+    public void mostrarTabuleiro(boolean inicioJogo) {
+        PecaTabuleiro pctb[][] = controle.getTabuleiro();
+        int idImg;
+
+        ImageIcon imgDuvida = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/Virada.jpg"));
+
+        if (inicioJogo || pctb[0][0].isVirado()) {
+            idImg = pctb[0][0].getIdImagem();
+            ImageIcon img00 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg00()).setIcon(img00);
+        } else {
+            (getLblImg00()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[0][1].isVirado()) {
+            idImg = pctb[0][1].getIdImagem();
+            ImageIcon img01 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg01()).setIcon(img01);
+        } else {
+            (getLblImg01()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[0][2].isVirado()) {
+            idImg = pctb[0][2].getIdImagem();
+            ImageIcon img02 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg02()).setIcon(img02);
+        } else {
+            (getLblImg02()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[0][3].isVirado()) {
+            idImg = pctb[0][3].getIdImagem();
+            ImageIcon img03 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg03()).setIcon(img03);
+        } else {
+            (getLblImg03()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[0][4].isVirado()) {
+            idImg = pctb[0][4].getIdImagem();
+            ImageIcon img04 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg04()).setIcon(img04);
+        } else {
+            (getLblImg04()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[0][5].isVirado()) {
+            idImg = pctb[0][5].getIdImagem();
+            ImageIcon img05 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg05()).setIcon(img05);
+        } else {
+            (getLblImg05()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[0][6].isVirado()) {
+            idImg = pctb[0][6].getIdImagem();
+            ImageIcon img06 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg06()).setIcon(img06);
+        } else {
+            (getLblImg06()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[0][7].isVirado()) {
+            idImg = pctb[0][7].getIdImagem();
+            ImageIcon img07 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg07()).setIcon(img07);
+        } else {
+            (getLblImg07()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[1][0].isVirado()) {
+            idImg = pctb[1][0].getIdImagem();
+            ImageIcon img10 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg10()).setIcon(img10);
+        } else {
+            (getLblImg10()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[1][1].isVirado()) {
+            idImg = pctb[1][1].getIdImagem();
+            ImageIcon img11 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg11()).setIcon(img11);
+        } else {
+            (getLblImg11()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[1][2].isVirado()) {
+            idImg = pctb[1][2].getIdImagem();
+            ImageIcon img12 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg12()).setIcon(img12);
+        } else {
+            (getLblImg12()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[1][3].isVirado()) {
+            idImg = pctb[1][3].getIdImagem();
+            ImageIcon img13 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg13()).setIcon(img13);
+        } else {
+            (getLblImg13()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[1][4].isVirado()) {
+            idImg = pctb[1][4].getIdImagem();
+            ImageIcon img14 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg14()).setIcon(img14);
+        } else {
+            (getLblImg14()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[1][5].isVirado()) {
+            idImg = pctb[1][5].getIdImagem();
+            ImageIcon img15 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg15()).setIcon(img15);
+        } else {
+            (getLblImg15()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[1][6].isVirado()) {
+            idImg = pctb[1][6].getIdImagem();
+            ImageIcon img16 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg16()).setIcon(img16);
+        } else {
+            (getLblImg16()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[1][7].isVirado()) {
+            idImg = pctb[1][7].getIdImagem();
+            ImageIcon img17 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg17()).setIcon(img17);
+        } else {
+            (getLblImg17()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][0].isVirado()) {
+            idImg = pctb[2][0].getIdImagem();
+            ImageIcon img20 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg20()).setIcon(img20);
+        } else {
+            (getLblImg20()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][1].isVirado()) {
+            idImg = pctb[2][1].getIdImagem();
+            ImageIcon img21 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg21()).setIcon(img21);
+        } else {
+            (getLblImg21()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][2].isVirado()) {
+            idImg = pctb[2][2].getIdImagem();
+            ImageIcon img22 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg22()).setIcon(img22);
+        } else {
+            (getLblImg22()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][3].isVirado()) {
+            idImg = pctb[2][3].getIdImagem();
+            ImageIcon img23 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg23()).setIcon(img23);
+        } else {
+            (getLblImg23()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][4].isVirado()) {
+            idImg = pctb[2][4].getIdImagem();
+            ImageIcon img24 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg24()).setIcon(img24);
+        } else {
+            (getLblImg24()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[2][5].isVirado()) {
+            idImg = pctb[2][5].getIdImagem();
+            ImageIcon img25 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg25()).setIcon(img25);
+        } else {
+            (getLblImg25()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][6].isVirado()) {
+            idImg = pctb[2][6].getIdImagem();
+            ImageIcon img26 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg26()).setIcon(img26);
+        } else {
+            (getLblImg26()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[2][7].isVirado()) {
+            idImg = pctb[2][7].getIdImagem();
+            ImageIcon img27 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg27()).setIcon(img27);
+        } else {
+            (getLblImg27()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][0].isVirado()) {
+            idImg = pctb[3][0].getIdImagem();
+            ImageIcon img30 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg30()).setIcon(img30);
+        } else {
+            (getLblImg30()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][1].isVirado()) {
+            idImg = pctb[3][1].getIdImagem();
+            ImageIcon img31 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg31()).setIcon(img31);
+        } else {
+            (getLblImg31()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][2].isVirado()) {
+            idImg = pctb[3][2].getIdImagem();
+            ImageIcon img32 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg32()).setIcon(img32);
+        } else {
+            (getLblImg32()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][3].isVirado()) {
+            idImg = pctb[3][3].getIdImagem();
+            ImageIcon img33 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg33()).setIcon(img33);
+        } else {
+            (getLblImg33()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][4].isVirado()) {
+            idImg = pctb[3][4].getIdImagem();
+            ImageIcon img34 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg34()).setIcon(img34);
+        } else {
+            (getLblImg34()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][5].isVirado()) {
+            idImg = pctb[3][5].getIdImagem();
+            ImageIcon img35 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg35()).setIcon(img35);
+        } else {
+            (getLblImg35()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][6].isVirado()) {
+            idImg = pctb[3][6].getIdImagem();
+            ImageIcon img36 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg36()).setIcon(img36);
+        } else {
+            (getLblImg36()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[3][7].isVirado()) {
+            idImg = pctb[3][7].getIdImagem();
+            ImageIcon img37 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg37()).setIcon(img37);
+        } else {
+            (getLblImg37()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[4][0].isVirado()) {
+            idImg = pctb[4][0].getIdImagem();
+            ImageIcon img40 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg40()).setIcon(img40);
+        } else {
+            (getLblImg40()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[4][1].isVirado()) {
+            idImg = pctb[4][1].getIdImagem();
+            ImageIcon img41 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg41()).setIcon(img41);
+        } else {
+            (getLblImg41()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[4][2].isVirado()) {
+            idImg = pctb[4][2].getIdImagem();
+            ImageIcon img42 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg42()).setIcon(img42);
+        } else {
+            (getLblImg42()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[4][3].isVirado()) {
+            idImg = pctb[4][3].getIdImagem();
+            ImageIcon img43 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg43()).setIcon(img43);
+        } else {
+            (getLblImg43()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[4][4].isVirado()) {
+            idImg = pctb[4][4].getIdImagem();
+            ImageIcon img44 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg44()).setIcon(img44);
+        } else {
+            (getLblImg44()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[4][5].isVirado()) {
+            idImg = pctb[4][5].getIdImagem();
+            ImageIcon img45 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg45()).setIcon(img45);
+        } else {
+            (getLblImg45()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[4][6].isVirado()) {
+            idImg = pctb[4][6].getIdImagem();
+            ImageIcon img46 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg46()).setIcon(img46);
+        } else {
+            (getLblImg46()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[4][7].isVirado()) {
+            idImg = pctb[4][7].getIdImagem();
+            ImageIcon img47 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg47()).setIcon(img47);
+        } else {
+            (getLblImg47()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[5][0].isVirado()) {
+            idImg = pctb[5][0].getIdImagem();
+            ImageIcon img50 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg50()).setIcon(img50);
+        } else {
+            (getLblImg50()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[5][1].isVirado()) {
+            idImg = pctb[5][1].getIdImagem();
+            ImageIcon img51 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg51()).setIcon(img51);
+        } else {
+            (getLblImg51()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[5][2].isVirado()) {
+            idImg = pctb[5][2].getIdImagem();
+            ImageIcon img52 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg52()).setIcon(img52);
+        } else {
+            (getLblImg52()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[5][3].isVirado()) {
+            idImg = pctb[5][3].getIdImagem();
+            ImageIcon img53 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg53()).setIcon(img53);
+        } else {
+            (getLblImg53()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[5][4].isVirado()) {
+            idImg = pctb[5][4].getIdImagem();
+            ImageIcon img54 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg54()).setIcon(img54);
+        } else {
+            (getLblImg54()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[5][5].isVirado()) {
+            idImg = pctb[5][5].getIdImagem();
+            ImageIcon img55 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg55()).setIcon(img55);
+        } else {
+            (getLblImg55()).setIcon(imgDuvida);
+        }
+
+        if (!inicioJogo || pctb[5][6].isVirado()) {
+            idImg = pctb[5][6].getIdImagem();
+            ImageIcon img56 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg56()).setIcon(img56);
+        } else {
+            (getLblImg56()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[5][7].isVirado()) {
+            idImg = pctb[5][7].getIdImagem();
+            ImageIcon img57 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg57()).setIcon(img57);
+        } else {
+            (getLblImg57()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[6][0].isVirado()) {
+            idImg = pctb[6][0].getIdImagem();
+            ImageIcon img60 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg60()).setIcon(img60);
+        } else {
+            (getLblImg60()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[6][1].isVirado()) {
+            idImg = pctb[6][1].getIdImagem();
+            ImageIcon img61 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg61()).setIcon(img61);
+        } else {
+            (getLblImg61()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[6][2].isVirado()) {
+            idImg = pctb[6][2].getIdImagem();
+            ImageIcon img62 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg62()).setIcon(img62);
+        } else {
+            (getLblImg62()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[6][3].isVirado()) {
+            idImg = pctb[6][3].getIdImagem();
+            ImageIcon img63 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg63()).setIcon(img63);
+        } else {
+            (getLblImg63()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[6][4].isVirado()) {
+            idImg = pctb[6][1].getIdImagem();
+            ImageIcon img64 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg64()).setIcon(img64);
+        } else {
+            (getLblImg64()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[6][5].isVirado()) {
+            idImg = pctb[6][5].getIdImagem();
+            ImageIcon img65 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg65()).setIcon(img65);
+        } else {
+            (getLblImg65()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[6][6].isVirado()) {
+            idImg = pctb[6][6].getIdImagem();
+            ImageIcon img66 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg66()).setIcon(img66);
+        } else {
+            (getLblImg66()).setIcon(imgDuvida);
+        }
+        if (!inicioJogo || pctb[6][7].isVirado()) {
+            idImg = pctb[6][7].getIdImagem();
+            ImageIcon img67 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+            (getLblImg67()).setIcon(img67);
+        } else {
+            (getLblImg67()).setIcon(imgDuvida);
+        }
+    }
+
     public javax.swing.JLabel getLblImg00() {
         return lblImg00;
     }
@@ -1325,227 +1787,227 @@ public class JPanelDificil extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblImg00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg00MouseClicked
-       tentarJogada(0, 0,lblImg00);   // TODO add your handling code here:
+        tentarJogada(0, 0, lblImg00);   // TODO add your handling code here:
     }//GEN-LAST:event_lblImg00MouseClicked
 
     private void lblImg10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg10MouseClicked
-        tentarJogada(1, 0,lblImg10); // TODO add your handling code here:
+        tentarJogada(1, 0, lblImg10); // TODO add your handling code here:
     }//GEN-LAST:event_lblImg10MouseClicked
 
     private void lblImg20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg20MouseClicked
-       tentarJogada(2, 0,lblImg20);  // TODO add your handling code here:
+        tentarJogada(2, 0, lblImg20);  // TODO add your handling code here:
     }//GEN-LAST:event_lblImg20MouseClicked
 
     private void lblImg30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg30MouseClicked
-       tentarJogada(3, 0,lblImg30);  // TODO add your handling code here:
+        tentarJogada(3, 0, lblImg30);  // TODO add your handling code here:
     }//GEN-LAST:event_lblImg30MouseClicked
 
     private void lblImg40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg40MouseClicked
-        tentarJogada(4, 0,lblImg40); // TODO add your handling code here:
+        tentarJogada(4, 0, lblImg40); // TODO add your handling code here:
     }//GEN-LAST:event_lblImg40MouseClicked
 
     private void lblImg50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg50MouseClicked
-        tentarJogada(5, 0,lblImg50); // TODO add your handling code here:
+        tentarJogada(5, 0, lblImg50); // TODO add your handling code here:
     }//GEN-LAST:event_lblImg50MouseClicked
 
     private void lblImg60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg60MouseClicked
-       tentarJogada(6, 0,lblImg60);  // TODO add your handling code here:
+        tentarJogada(6, 0, lblImg60);  // TODO add your handling code here:
     }//GEN-LAST:event_lblImg60MouseClicked
 
     private void lblImg01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg01MouseClicked
-         tentarJogada(0, 1,lblImg01);// TODO add your handling code here:
+        tentarJogada(0, 1, lblImg01);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg01MouseClicked
 
     private void lblImg11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg11MouseClicked
-        tentarJogada(1, 1,lblImg11); // TODO add your handling code here:
+        tentarJogada(1, 1, lblImg11); // TODO add your handling code here:
     }//GEN-LAST:event_lblImg11MouseClicked
 
     private void lblImg21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg21MouseClicked
-         tentarJogada(2, 1,lblImg21);// TODO add your handling code here:
+        tentarJogada(2, 1, lblImg21);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg21MouseClicked
 
     private void lblImg31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg31MouseClicked
-         tentarJogada(3, 1,lblImg31);// TODO add your handling code here:
+        tentarJogada(3, 1, lblImg31);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg31MouseClicked
 
     private void lblImg41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg41MouseClicked
-         tentarJogada(4, 1,lblImg41);// TODO add your handling code here:
+        tentarJogada(4, 1, lblImg41);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg41MouseClicked
 
     private void lblImg51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg51MouseClicked
-         tentarJogada(5, 1,lblImg51);// TODO add your handling code here:
+        tentarJogada(5, 1, lblImg51);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg51MouseClicked
 
     private void lblImg61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg61MouseClicked
-         tentarJogada(6, 1,lblImg61);// TODO add your handling code here:
+        tentarJogada(6, 1, lblImg61);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg61MouseClicked
 
     private void lblImg02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg02MouseClicked
-         tentarJogada(0, 2,lblImg02);// TODO add your handling code here:
+        tentarJogada(0, 2, lblImg02);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg02MouseClicked
 
     private void lblImg12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg12MouseClicked
-         tentarJogada(1, 2,lblImg12);// TODO add your handling code here:
+        tentarJogada(1, 2, lblImg12);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg12MouseClicked
 
     private void lblImg22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg22MouseClicked
-         tentarJogada(2, 2,lblImg22);// TODO add your handling code here:
+        tentarJogada(2, 2, lblImg22);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg22MouseClicked
 
     private void lblImg32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg32MouseClicked
-         tentarJogada(3, 2,lblImg32);// TODO add your handling code here:
+        tentarJogada(3, 2, lblImg32);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg32MouseClicked
 
     private void lblImg42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg42MouseClicked
-         tentarJogada(4, 2,lblImg42);// TODO add your handling code here:
+        tentarJogada(4, 2, lblImg42);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg42MouseClicked
 
     private void lblImg52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg52MouseClicked
-         tentarJogada(5, 2,lblImg52);// TODO add your handling code here:
+        tentarJogada(5, 2, lblImg52);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg52MouseClicked
 
     private void lblImg62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg62MouseClicked
-         tentarJogada(6, 2,lblImg62);// TODO add your handling code here:
+        tentarJogada(6, 2, lblImg62);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg62MouseClicked
 
     private void lblImg03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg03MouseClicked
-         tentarJogada(0, 3,lblImg03);// TODO add your handling code here:
+        tentarJogada(0, 3, lblImg03);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg03MouseClicked
 
     private void lblImg13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg13MouseClicked
-         tentarJogada(1, 3,lblImg13);// TODO add your handling code here:
+        tentarJogada(1, 3, lblImg13);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg13MouseClicked
 
     private void lblImg23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg23MouseClicked
-         tentarJogada(2, 3,lblImg23);// TODO add your handling code here:
+        tentarJogada(2, 3, lblImg23);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg23MouseClicked
 
     private void lblImg33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg33MouseClicked
-         tentarJogada(3, 3,lblImg33);// TODO add your handling code here:
+        tentarJogada(3, 3, lblImg33);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg33MouseClicked
 
     private void lblImg43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg43MouseClicked
-         tentarJogada(4, 3,lblImg43);// TODO add your handling code here:
+        tentarJogada(4, 3, lblImg43);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg43MouseClicked
 
     private void lblImg53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg53MouseClicked
-         tentarJogada(5, 3,lblImg53);// TODO add your handling code here:
+        tentarJogada(5, 3, lblImg53);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg53MouseClicked
 
     private void lblImg63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg63MouseClicked
-         tentarJogada(6, 3,lblImg63);// TODO add your handling code here:
+        tentarJogada(6, 3, lblImg63);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg63MouseClicked
 
     private void lblImg04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg04MouseClicked
-         tentarJogada(0, 4,lblImg04);// TODO add your handling code here:
+        tentarJogada(0, 4, lblImg04);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg04MouseClicked
 
     private void lblImg14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg14MouseClicked
-         tentarJogada(1, 4,lblImg14);// TODO add your handling code here:
+        tentarJogada(1, 4, lblImg14);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg14MouseClicked
 
     private void lblImg24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg24MouseClicked
-         tentarJogada(2, 4,lblImg24);// TODO add your handling code here:
+        tentarJogada(2, 4, lblImg24);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg24MouseClicked
 
     private void lblImg34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg34MouseClicked
-         tentarJogada(3, 4,lblImg34);// TODO add your handling code here:
+        tentarJogada(3, 4, lblImg34);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg34MouseClicked
 
     private void lblImg44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg44MouseClicked
-         tentarJogada(4, 4,lblImg44);// TODO add your handling code here:
+        tentarJogada(4, 4, lblImg44);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg44MouseClicked
 
     private void lblImg54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg54MouseClicked
-         tentarJogada(5, 4,lblImg54);// TODO add your handling code here:
+        tentarJogada(5, 4, lblImg54);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg54MouseClicked
 
     private void lblImg64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg64MouseClicked
-         tentarJogada(6, 4,lblImg64);// TODO add your handling code here:
+        tentarJogada(6, 4, lblImg64);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg64MouseClicked
 
     private void lblImg05MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg05MouseClicked
-         tentarJogada(0, 5,lblImg05);// TODO add your handling code here:
+        tentarJogada(0, 5, lblImg05);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg05MouseClicked
 
     private void lblImg15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg15MouseClicked
-         tentarJogada(1, 5,lblImg15);// TODO add your handling code here:
+        tentarJogada(1, 5, lblImg15);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg15MouseClicked
 
     private void lblImg25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg25MouseClicked
-         tentarJogada(2, 5,lblImg25);// TODO add your handling code here:
+        tentarJogada(2, 5, lblImg25);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg25MouseClicked
 
     private void lblImg35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg35MouseClicked
-         tentarJogada(3, 5,lblImg35);// TODO add your handling code here:
+        tentarJogada(3, 5, lblImg35);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg35MouseClicked
 
     private void lblImg45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg45MouseClicked
-         tentarJogada(4, 5,lblImg45);// TODO add your handling code here:
+        tentarJogada(4, 5, lblImg45);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg45MouseClicked
 
     private void lblImg55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg55MouseClicked
-         tentarJogada(5, 5,lblImg55);// TODO add your handling code here:
+        tentarJogada(5, 5, lblImg55);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg55MouseClicked
 
     private void lblImg65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg65MouseClicked
-         tentarJogada(6, 5,lblImg65);// TODO add your handling code here:
+        tentarJogada(6, 5, lblImg65);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg65MouseClicked
 
     private void lblImg06MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg06MouseClicked
-         tentarJogada(0, 6,lblImg06);// TODO add your handling code here:
+        tentarJogada(0, 6, lblImg06);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg06MouseClicked
 
     private void lblImg16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg16MouseClicked
-         tentarJogada(1, 6,lblImg16);// TODO add your handling code here:
+        tentarJogada(1, 6, lblImg16);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg16MouseClicked
 
     private void lblImg26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg26MouseClicked
-         tentarJogada(2, 6,lblImg26);// TODO add your handling code here:
+        tentarJogada(2, 6, lblImg26);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg26MouseClicked
 
     private void lblImg36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg36MouseClicked
-         tentarJogada(3, 6,lblImg36);// TODO add your handling code here:
+        tentarJogada(3, 6, lblImg36);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg36MouseClicked
 
     private void lblImg46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg46MouseClicked
-         tentarJogada(4, 6,lblImg46);// TODO add your handling code here:
+        tentarJogada(4, 6, lblImg46);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg46MouseClicked
 
     private void lblImg56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg56MouseClicked
-         tentarJogada(5, 6,lblImg56);// TODO add your handling code here:
+        tentarJogada(5, 6, lblImg56);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg56MouseClicked
 
     private void lblImg66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg66MouseClicked
-         tentarJogada(6, 6,lblImg66);// TODO add your handling code here:
+        tentarJogada(6, 6, lblImg66);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg66MouseClicked
 
     private void lblImg07MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg07MouseClicked
-         tentarJogada(0, 7,lblImg07);// TODO add your handling code here:
+        tentarJogada(0, 7, lblImg07);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg07MouseClicked
 
     private void lblImg17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg17MouseClicked
-         tentarJogada(1, 7,lblImg17);// TODO add your handling code here:
+        tentarJogada(1, 7, lblImg17);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg17MouseClicked
 
     private void lblImg27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg27MouseClicked
-         tentarJogada(2, 7,lblImg27);// TODO add your handling code here:
+        tentarJogada(2, 7, lblImg27);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg27MouseClicked
 
     private void lblImg37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg37MouseClicked
-         tentarJogada(3, 7,lblImg37);// TODO add your handling code here:
+        tentarJogada(3, 7, lblImg37);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg37MouseClicked
 
     private void lblImg47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg47MouseClicked
-         tentarJogada(4, 7,lblImg47);// TODO add your handling code here:
+        tentarJogada(4, 7, lblImg47);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg47MouseClicked
 
     private void lblImg57MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg57MouseClicked
-         tentarJogada(5, 7,lblImg57);// TODO add your handling code here:
+        tentarJogada(5, 7, lblImg57);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg57MouseClicked
 
     private void lblImg67MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg67MouseClicked
-         tentarJogada(6, 7,lblImg67);// TODO add your handling code here:
+        tentarJogada(6, 7, lblImg67);// TODO add your handling code here:
     }//GEN-LAST:event_lblImg67MouseClicked
 
 
