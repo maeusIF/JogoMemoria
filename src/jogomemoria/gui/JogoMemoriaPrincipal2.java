@@ -6,6 +6,7 @@
 package jogomemoria.gui;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import jogomemoria.control.JogoMemoriaCtrl;
 import jogomemoria.model.PecaTabuleiro;
 
@@ -27,6 +28,7 @@ public class JogoMemoriaPrincipal2 extends javax.swing.JFrame {
     public JogoMemoriaPrincipal2() {
         initComponents();
         controle = new JogoMemoriaCtrl();
+        pf = new JPanelFacil(controle);        
     }
 
     /**
@@ -153,6 +155,14 @@ public class JogoMemoriaPrincipal2 extends javax.swing.JFrame {
         controle.iniciarPartida(nivelSelec, tempoL);
         mostrarTabuleiro(true);
         this.repaint();
+        
+        
+        mostrarTabuleiro(true);
+        int resp = JOptionPane.showConfirmDialog(this,"O Jogo pode ser iniciado ?","Confirme inicio",JOptionPane.YES_NO_OPTION);
+        if (resp == JOptionPane.YES_OPTION){
+            mostrarTabuleiro(false);
+        }
+        
     }//GEN-LAST:event_btnIniciar2ActionPerformed
 
     /**

@@ -7,6 +7,7 @@ package jogomemoria.gui;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import jogomemoria.control.JogoMemoriaCtrl;
 import jogomemoria.model.PecaTabuleiro;
 
@@ -160,7 +161,26 @@ public class JPanelFacil extends javax.swing.JPanel {
     }
 
     private void tentarJogada(int linha, int coluna, JLabel rotuloImagem) {
+        PecaTabuleiro pt[][] = controle.getTabuleiro();
 
+        int idImg = pt[linha][coluna].getIdImagem();
+        ImageIcon img = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+        rotuloImagem.setIcon(img);
+
+        if (pecasSelecionadas == 0) {
+            ptSel1 = pt[linha][coluna];
+            pecasSelecionadas++;
+        } else if (pecasSelecionadas == 1) {
+            ptSel2 = pt[linha][coluna];
+            int result = controle.realizarJogada(ptSel1, ptSel2);
+            if (result == controle.JOGADA_CERTA) {
+                JOptionPane.showMessageDialog(this, "Muito bem", "Resultado da Jogada", JOptionPane.INFORMATION_MESSAGE);
+            } else if (result == controle.JOGADA_ERRADA) {
+                JOptionPane.showMessageDialog(this, "Você errou, tente novamente", "Resultado da Jogada", JOptionPane.INFORMATION_MESSAGE);
+            } else if (result == controle.JOGADA_INVALIDA) {
+                JOptionPane.showMessageDialog(this, "Isso nao vale", "Resultado da Jogada", JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }
 
     public javax.swing.JLabel getLblImg00() {
