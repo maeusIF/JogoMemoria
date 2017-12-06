@@ -1,6 +1,5 @@
 package jogomemoria.control;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.Constants;
 import java.sql.Timestamp;
 import java.util.Random;
 import jogomemoria.model.PecaTabuleiro;
@@ -98,49 +97,40 @@ public class JogoMemoriaCtrl {
         tempoLimite = (tempoLimite * 60);
         setAcertosPartida(0);
 
-        Random sorteioImg = new Random();
         /*
        UMA CLASSE USA A OUTRA QUANDO UMA USA A VARIAVEL DO TIPO DA OUTRA 
          */
-        for (int i = 0; i < MAX_IMAGENS_PARTIDA; i++) {
-            sorteioImg.nextInt();
-            int tabuleiro[][] = {{MAX_LIN_DIFICIL}, {MAX_LIN_DIFICIL}};
-            int tabControle[][] = {{0}, {0}};
-
-            if (nivel == FACIL) {
-                setNivelAtual(FACIL);
-                qtdImgsPartida = QTDE_IMG_FACIL;
-                linhaMax = MAX_LIN_FACIL;
-                colunaMax = MAX_COL_FACIL;
-                qtdePecasPorImg = 2;
-            }
-            if (nivel == INTERMEDIARIO) {
-                setNivelAtual(INTERMEDIARIO);
-                qtdImgsPartida = QTDE_IMG_INTERMEDIARIO;
-                linhaMax = MAX_LIN_INTERMEDIARIO;
-                colunaMax = MAX_COL_INTERMEDIARIO;
-                qtdePecasPorImg = 2;
-            }
-            if (nivel == DIFICIL) {
-                setNivelAtual(DIFICIL);
-                qtdImgsPartida = QTDE_IMG_DIFICIL;
-                linhaMax = MAX_LIN_DIFICIL;
-                colunaMax = MAX_COL_DIFICIL;
-                qtdePecasPorImg = 3;
-            } else {
-                System.out.println("ERRO");//lançar erro
-            }
-            sortearImagensPartida();
-            preencherTabuleiro();
-          
-
+        if (nivel == FACIL) {
+            setNivelAtual(FACIL);
+            qtdImgsPartida = QTDE_IMG_FACIL;
+            linhaMax = MAX_LIN_FACIL;
+            colunaMax = MAX_COL_FACIL;
+            qtdePecasPorImg = 2;
         }
+        if (nivel == INTERMEDIARIO) {
+            setNivelAtual(INTERMEDIARIO);
+            qtdImgsPartida = QTDE_IMG_INTERMEDIARIO;
+            linhaMax = MAX_LIN_INTERMEDIARIO;
+            colunaMax = MAX_COL_INTERMEDIARIO;
+            qtdePecasPorImg = 2;
+        }
+        if (nivel == DIFICIL) {
+            setNivelAtual(DIFICIL);
+            qtdImgsPartida = QTDE_IMG_DIFICIL;
+            linhaMax = MAX_LIN_DIFICIL;
+            colunaMax = MAX_COL_DIFICIL;
+            qtdePecasPorImg = 3;
+        } else {
+            System.out.println("ERRO");//lançar erro
+        }
+        sortearImagensPartida();
+        preencherTabuleiro(getNivelAtual());
 
     }
 
     private int obterNumSorteado(int inicio, int fim) {
         int n = INDEFINIDO;
-        if ((fim >= inicio) && (inicio >= 0)) {
+        if ((inicio <= fim) && (inicio >= 0)) {
             n = inicio + (int) (Math.random() * ((fim - inicio) + 1));
         }
 
@@ -157,25 +147,20 @@ public class JogoMemoriaCtrl {
     private void sortearImagensPartida() {
         boolean achou = false;
         limparImgsPartida();
-        int qtdeSorteadas = 0;
+        int qtdSorteadas = 0;
 
-        while (qtdeSorteadas < qtdImgsPartida) {
+        while (qtdSorteadas < qtdImgsPartida) {
             int i = obterNumSorteado(1, QTDE_IMAGENS_DISPONIVEIS);
-            achou = false;
-            for (int k = 0; k < qtdeSorteadas; k++) {
+            for (int k = 0; k < qtdSorteadas; k++) {
                 if (imgsPartida[k] == i) {
                     achou = true;
-
                 }
-                break;/*
-       UMA CLASSE USA A OUTRA QUANDO UMA USA A VARIAVEL DO TIPO DA OUTRA 
-                 */
+                break;
             }
             if (!achou) {
-                imgsPartida[qtdeSorteadas] = i;
-                qtdeSorteadas++;
+                imgsPartida[qtdSorteadas] = i;
+                qtdSorteadas++;
             }
-
         }
 
         /*
@@ -221,7 +206,7 @@ public class JogoMemoriaCtrl {
      * Preenche o tabuleiro com duplas ou trios das imagens sorteadas,
      * dependendo do nível definido para a partida.
      */
-    private void preencherTabuleiro() {
+    private void preencherTabuleiro(int nivel) {
         limparTabuleiro();
         int num = 0;
 
@@ -262,7 +247,7 @@ public class JogoMemoriaCtrl {
                  você está processando. Ou seja você deve processa do primeiro até o último elemento.
  
          */
-        
+
     }
 
     /**
@@ -297,7 +282,7 @@ public class JogoMemoriaCtrl {
      * Refere-se a JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2) {
-        int resultado = JOGADA_ERRADA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
+        int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
         if (pt1.getIdImagem() == pt2.getIdImagem()) {
             if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
                     && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)) {
@@ -308,7 +293,7 @@ public class JogoMemoriaCtrl {
                     pt1.setVirado(true);
                     pt2.setVirado(true);
                 } else {
-                    resultado = JOGADA_INVALIDA;
+                    resultado = JOGADA_ERRADA;
                 }
             }
         }

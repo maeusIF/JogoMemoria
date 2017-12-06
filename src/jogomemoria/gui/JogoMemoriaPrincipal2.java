@@ -5,6 +5,7 @@
  */
 package jogomemoria.gui;
 
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import jogomemoria.control.JogoMemoriaCtrl;
@@ -147,12 +148,15 @@ public class JogoMemoriaPrincipal2 extends javax.swing.JFrame {
 
         if (nivel.equals("Iniciante")) {
             nivelSelec = controle.FACIL;
+             jpt.mostrarTabuleiro(pf);
         }
         if (((String) cmbNivel.getSelectedItem()).equals("Intermediario")) {
             nivelSelec = controle.INTERMEDIARIO;
+             jpt.mostrarTabuleiro(pi);
         }
         if (nivel.equals("Dificil")) {
             nivelSelec = controle.DIFICIL;
+             jpt.mostrarTabuleiro(pd);
         }
         int tempoL = (((Integer) spnTempo.getValue()).intValue());
 

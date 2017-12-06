@@ -5,6 +5,7 @@
  */
 package jogomemoria.gui;
 
+import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
 /**
@@ -29,6 +30,9 @@ public class Tabuleiro extends javax.swing.JPanel {
 
     public JSplitPane getSPPTabuleiro() {
         return getSppTabuleiro();
+    }
+     public void mostrarTabuleiro(JPanel pnl) {
+        sppTabuleiro1.setLeftComponent(pnl);
     }
 
     /**

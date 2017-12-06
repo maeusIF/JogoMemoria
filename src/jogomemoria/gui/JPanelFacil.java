@@ -161,7 +161,7 @@ public class JPanelFacil extends javax.swing.JPanel {
         PecaTabuleiro pt[][] = controle.getTabuleiro();
 
         int idImg = pt[linha][coluna].getIdImagem();
-        ImageIcon img = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
+        ImageIcon img = new ImageIcon(getClass().getResource("/jogomemoria/gui/imagens/jm" + idImg + ".jpg"));
         rotuloImagem.setIcon(img);
 
         if (pecasSelecionadas == 0) {
@@ -171,18 +171,20 @@ public class JPanelFacil extends javax.swing.JPanel {
             ptSel2 = pt[linha][coluna];
             int result = controle.realizarJogada(ptSel1, ptSel2);
             if (result == controle.JOGADA_CERTA) {
-                JOptionPane.showMessageDialog(this, "Muito bem", "Resultado da Jogada", JOptionPane.INFORMATION_MESSAGE);
+        
+                JOptionPane.showMessageDialog(this, "Muito Bem!!!", "Resultado da Jogada", JOptionPane.INFORMATION_MESSAGE);
+                
             } else if (result == controle.JOGADA_ERRADA) {
-                JOptionPane.showMessageDialog(this, "Você errou, tente novamente", "Resultado da Jogada", JOptionPane.INFORMATION_MESSAGE);
+     
+                JOptionPane.showMessageDialog(this, "Isso não vale!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                
             } else if (result == controle.JOGADA_INVALIDA) {
-                JOptionPane.showMessageDialog(this, "Isso nao vale", "Resultado da Jogada", JOptionPane.ERROR_MESSAGE);
-            }
-            mostrarTabuleiro(false);
 
+                JOptionPane.showMessageDialog(this, "Voce errou. Tente novamente", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
+            }
+            pecasSelecionadas = 0;
+            mostrarTabuleiro(false);
         }
-        pecasSelecionadas = 0;
-        ptSel1 = null;
-        ptSel2 = null;
     }
 
     public javax.swing.JLabel getLblImg00() {
